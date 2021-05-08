@@ -27,5 +27,6 @@ extension LightAndBattery {
 }
 
 extension LightAndBattery : Identifiable {
-
+    
+    
 }
