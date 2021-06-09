@@ -29,6 +29,7 @@
 		38A9C3FD2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */; };
 		38A9C3FE2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */; };
 		84849A512670A040000CA8BA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84849A502670A040000CA8BA /* CameraViewController.swift */; };
+		84849A532670AF57000CA8BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84849A522670AF57000CA8BA /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightAndBattery+CoreDataClass.swift"; sourceTree = "<group>"; };
 		38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightAndBattery+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84849A502670A040000CA8BA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		84849A522670AF57000CA8BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				381955EF2642FC99001A9F2A /* SceneDelegate.swift */,
 				381955F12642FC99001A9F2A /* ViewController.swift */,
 				84849A502670A040000CA8BA /* CameraViewController.swift */,
+				84849A522670AF57000CA8BA /* MapViewController.swift */,
 				381956242643058D001A9F2A /* data */,
 				381955F32642FC99001A9F2A /* Main.storyboard */,
 				381955F92642FC9A001A9F2A /* Assets.xcassets */,
@@ -350,6 +353,7 @@
 				84849A512670A040000CA8BA /* CameraViewController.swift in Sources */,
 				38A9C3E62643A91F00576AA6 /* String+Lines.swift in Sources */,
 				38A9C3E42643A91F00576AA6 /* Description.swift in Sources */,
+				84849A532670AF57000CA8BA /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
