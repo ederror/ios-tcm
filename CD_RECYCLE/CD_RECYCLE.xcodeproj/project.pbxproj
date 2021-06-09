@@ -30,6 +30,7 @@
 		38A9C3FE2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */; };
 		84849A512670A040000CA8BA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84849A502670A040000CA8BA /* CameraViewController.swift */; };
 		84849A532670AF57000CA8BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84849A522670AF57000CA8BA /* MapViewController.swift */; };
+		84849A552670D7C5000CA8BA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 84849A542670D7C5000CA8BA /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightAndBattery+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84849A502670A040000CA8BA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		84849A522670AF57000CA8BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		84849A542670D7C5000CA8BA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		381955E12642FC99001A9F2A = {
 			isa = PBXGroup;
 			children = (
+				84849A542670D7C5000CA8BA /* .gitignore */,
 				38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */,
 				38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */,
 				38A9C3B42643A91F00576AA6 /* SwiftCSV */,
@@ -312,6 +315,7 @@
 				381956282643058D001A9F2A /* 시트 1-표 2.csv in Resources */,
 				381955FA2642FC9A001A9F2A /* Assets.xcassets in Resources */,
 				381955F52642FC99001A9F2A /* Main.storyboard in Resources */,
+				84849A552670D7C5000CA8BA /* .gitignore in Resources */,
 				381956272643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
