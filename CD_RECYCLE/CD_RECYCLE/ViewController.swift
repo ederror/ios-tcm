@@ -29,16 +29,18 @@ struct LightAndBatteryItem {
 }
 
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController{//}, UITableViewDelegate, UITableViewDataSource {
     var container: NSPersistentContainer!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    /*
     let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
+    */
     
     private var recycles = PersistenceManager.shared.fetch(request: Recycle.fetchRequest())
     private var lightandbatterys = PersistenceManager.shared.fetch(request: LightAndBattery.fetchRequest())
@@ -115,16 +117,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             print("deleteAll failed")
         }
-        
+        /*
         //For CoreData View
         title = "CoreData View"
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
+ */
         
     }
     
+    /*
     //For CoreData View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recycles.count
@@ -140,6 +144,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+ */
     
 }
 

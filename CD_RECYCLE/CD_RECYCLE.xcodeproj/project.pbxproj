@@ -28,6 +28,7 @@
 		38A9C3FA2643B00300576AA6 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 38A9C3F92643B00300576AA6 /* SwiftCSV */; };
 		38A9C3FD2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */; };
 		38A9C3FE2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */; };
+		84849A512670A040000CA8BA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84849A502670A040000CA8BA /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		38A9C3F72643AF6D00576AA6 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightAndBattery+CoreDataClass.swift"; sourceTree = "<group>"; };
 		38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightAndBattery+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84849A502670A040000CA8BA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				381955ED2642FC99001A9F2A /* AppDelegate.swift */,
 				381955EF2642FC99001A9F2A /* SceneDelegate.swift */,
 				381955F12642FC99001A9F2A /* ViewController.swift */,
+				84849A502670A040000CA8BA /* CameraViewController.swift */,
 				381956242643058D001A9F2A /* data */,
 				381955F32642FC99001A9F2A /* Main.storyboard */,
 				381955F92642FC9A001A9F2A /* Assets.xcassets */,
@@ -344,6 +347,7 @@
 				38A9C3E92643A91F00576AA6 /* Parser.swift in Sources */,
 				38A9C3E72643A91F00576AA6 /* NamedView.swift in Sources */,
 				38A9C3FE2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift in Sources */,
+				84849A512670A040000CA8BA /* CameraViewController.swift in Sources */,
 				38A9C3E62643A91F00576AA6 /* String+Lines.swift in Sources */,
 				38A9C3E42643A91F00576AA6 /* Description.swift in Sources */,
 			);
