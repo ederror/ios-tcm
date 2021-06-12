@@ -96,14 +96,14 @@
 				3809F48E2645A17A0003EE05 /* AppDelegate.swift */,
 				3809F4902645A17A0003EE05 /* SceneDelegate.swift */,
 				3809F4922645A17A0003EE05 /* ContentView.swift */,
+				3811EE1B26751A8E00001F9A /* NMapViewModel.swift */,
+				3809F4B02645A3A80003EE05 /* DataManager.swift */,
+				3811EE192675194000001F9A /* Geocode.swift */,
 				3809F4972645A17B0003EE05 /* Assets.xcassets */,
 				3809F49C2645A17B0003EE05 /* LaunchScreen.storyboard */,
 				3809F49F2645A17B0003EE05 /* Info.plist */,
 				3809F4942645A17A0003EE05 /* RecycleApp.xcdatamodeld */,
 				3809F4992645A17B0003EE05 /* Preview Content */,
-				3809F4B02645A3A80003EE05 /* DataManager.swift */,
-				3811EE192675194000001F9A /* Geocode.swift */,
-				3811EE1B26751A8E00001F9A /* NMapViewModel.swift */,
 			);
 			path = RecycleApp;
 			sourceTree = "<group>";

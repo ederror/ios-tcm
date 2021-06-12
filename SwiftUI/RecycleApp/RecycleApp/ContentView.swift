@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 import SwiftCSV
 import NMapsMap
+import CoreLocation
 
 struct RecycleItem {
     public var name: String?
@@ -31,14 +32,24 @@ struct LightAndBatteryItem {
 
 
 struct ContentView: View {
-    @ObservedObject var viewModel = NMapViewModel()
     let initVar = DataManager()
+    var locationManager = CLLocationManager()
+    @ObservedObject var viewModel = NMapViewModel()
     
     var body: some View {
         ZStack {
             NMapView()
+            
+            Button(action: {
+                let coor = locationManager.location?.coordinate
+                print(coor?.latitude)
+                print(coor?.longitude)
+            }) {
+                Text("click")
+            }
         }
         .onAppear{
+            locationManager.requestWhenInUseAuthorization()
             self.initVar.dataLoad()
         }
     }
@@ -56,7 +67,18 @@ struct NMapView : UIViewRepresentable {
     @ObservedObject var viewModel = NMapViewModel()
 
     func makeUIView(context: Context) -> NMFNaverMapView {
-        return viewModel.makeMapView()
+        viewModel.mapView.showCompass = true
+        viewModel.mapView.showZoomControls = true
+        viewModel.mapView.showLocationButton = true
+        viewModel.mapView.showScaleBar = true
+        viewModel.mapView.mapView.positionMode = .compass
+        
+        let LO = viewModel.mapView.mapView.locationOverlay
+        LO.hidden = false
+        
+//        mapView.mapView.moveCamera(CU)
+
+        return viewModel.mapView
     }
     
     func updateUIView(_ uiView: NMFNaverMapView, context: Context) {
