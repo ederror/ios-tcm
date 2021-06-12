@@ -20,6 +20,12 @@
 		3809F4AE2645A3610003EE05 /* Recycle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809F4AA2645A3610003EE05 /* Recycle+CoreDataClass.swift */; };
 		3809F4AF2645A3610003EE05 /* Recycle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809F4AB2645A3610003EE05 /* Recycle+CoreDataProperties.swift */; };
 		3809F4B12645A3A80003EE05 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809F4B02645A3A80003EE05 /* DataManager.swift */; };
+		3811EE1A2675194000001F9A /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3811EE192675194000001F9A /* Geocode.swift */; };
+		3811EE1C26751A8E00001F9A /* NMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3811EE1B26751A8E00001F9A /* NMapViewModel.swift */; };
+		3811EE2026751B5700001F9A /* 시트 1-표 2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3811EE1E26751B5700001F9A /* 시트 1-표 2.csv */; };
+		3811EE2126751B5700001F9A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3811EE1F26751B5700001F9A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */; };
+		3811EE2326751C7F00001F9A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3811EE2226751C7F00001F9A /* .gitignore */; };
+		391D9C851FB5D232E5D4AC31 /* Pods_RecycleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C12F33F4BF162121566FE98 /* Pods_RecycleApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,14 @@
 		3809F4AA2645A3610003EE05 /* Recycle+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recycle+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3809F4AB2645A3610003EE05 /* Recycle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recycle+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3809F4B02645A3A80003EE05 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3811EE192675194000001F9A /* Geocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocode.swift; sourceTree = "<group>"; };
+		3811EE1B26751A8E00001F9A /* NMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewModel.swift; sourceTree = "<group>"; };
+		3811EE1E26751B5700001F9A /* 시트 1-표 2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "시트 1-표 2.csv"; sourceTree = "<group>"; };
+		3811EE1F26751B5700001F9A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv"; sourceTree = "<group>"; };
+		3811EE2226751C7F00001F9A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5EDF2CD2E65C2815852548E9 /* Pods-RecycleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycleApp.debug.xcconfig"; path = "Target Support Files/Pods-RecycleApp/Pods-RecycleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9C12F33F4BF162121566FE98 /* Pods_RecycleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecycleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D087B42521C61F67D3382995 /* Pods-RecycleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycleApp.release.xcconfig"; path = "Target Support Files/Pods-RecycleApp/Pods-RecycleApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3809F4A72645A21E0003EE05 /* SwiftCSV in Frameworks */,
+				391D9C851FB5D232E5D4AC31 /* Pods_RecycleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +69,16 @@
 		3809F4822645A17A0003EE05 = {
 			isa = PBXGroup;
 			children = (
+				3811EE2226751C7F00001F9A /* .gitignore */,
+				3811EE1D26751B1600001F9A /* data */,
 				3809F4A82645A3610003EE05 /* LightAndBattery+CoreDataClass.swift */,
 				3809F4A92645A3610003EE05 /* LightAndBattery+CoreDataProperties.swift */,
 				3809F4AA2645A3610003EE05 /* Recycle+CoreDataClass.swift */,
 				3809F4AB2645A3610003EE05 /* Recycle+CoreDataProperties.swift */,
 				3809F48D2645A17A0003EE05 /* RecycleApp */,
 				3809F48C2645A17A0003EE05 /* Products */,
+				E9B703E59042C699922FB541 /* Pods */,
+				FCABDF76698F95CEEEC07935 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +102,8 @@
 				3809F4942645A17A0003EE05 /* RecycleApp.xcdatamodeld */,
 				3809F4992645A17B0003EE05 /* Preview Content */,
 				3809F4B02645A3A80003EE05 /* DataManager.swift */,
+				3811EE192675194000001F9A /* Geocode.swift */,
+				3811EE1B26751A8E00001F9A /* NMapViewModel.swift */,
 			);
 			path = RecycleApp;
 			sourceTree = "<group>";
@@ -95,6 +116,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3811EE1D26751B1600001F9A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				3811EE1F26751B5700001F9A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */,
+				3811EE1E26751B5700001F9A /* 시트 1-표 2.csv */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		E9B703E59042C699922FB541 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EDF2CD2E65C2815852548E9 /* Pods-RecycleApp.debug.xcconfig */,
+				D087B42521C61F67D3382995 /* Pods-RecycleApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FCABDF76698F95CEEEC07935 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C12F33F4BF162121566FE98 /* Pods_RecycleApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3809F4A22645A17B0003EE05 /* Build configuration list for PBXNativeTarget "RecycleApp" */;
 			buildPhases = (
+				97CFBF4EE25BE203E748D221 /* [CP] Check Pods Manifest.lock */,
 				3809F4872645A17A0003EE05 /* Sources */,
 				3809F4882645A17A0003EE05 /* Frameworks */,
 				3809F4892645A17A0003EE05 /* Resources */,
+				2435E4676063CD35279CC233 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,23 +207,70 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3811EE2026751B5700001F9A /* 시트 1-표 2.csv in Resources */,
+				3811EE2126751B5700001F9A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */,
 				3809F49E2645A17B0003EE05 /* LaunchScreen.storyboard in Resources */,
 				3809F49B2645A17B0003EE05 /* Preview Assets.xcassets in Resources */,
+				3811EE2326751C7F00001F9A /* .gitignore in Resources */,
 				3809F4982645A17B0003EE05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2435E4676063CD35279CC233 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecycleApp/Pods-RecycleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecycleApp/Pods-RecycleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RecycleApp/Pods-RecycleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97CFBF4EE25BE203E748D221 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecycleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3809F4872645A17A0003EE05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3811EE1A2675194000001F9A /* Geocode.swift in Sources */,
 				3809F4AD2645A3610003EE05 /* LightAndBattery+CoreDataProperties.swift in Sources */,
 				3809F48F2645A17A0003EE05 /* AppDelegate.swift in Sources */,
 				3809F4AF2645A3610003EE05 /* Recycle+CoreDataProperties.swift in Sources */,
 				3809F4912645A17A0003EE05 /* SceneDelegate.swift in Sources */,
+				3811EE1C26751A8E00001F9A /* NMapViewModel.swift in Sources */,
 				3809F4AE2645A3610003EE05 /* Recycle+CoreDataClass.swift in Sources */,
 				3809F4932645A17A0003EE05 /* ContentView.swift in Sources */,
 				3809F4AC2645A3610003EE05 /* LightAndBattery+CoreDataClass.swift in Sources */,
@@ -315,6 +411,7 @@
 		};
 		3809F4A32645A17B0003EE05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EDF2CD2E65C2815852548E9 /* Pods-RecycleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -336,6 +433,7 @@
 		};
 		3809F4A42645A17B0003EE05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D087B42521C61F67D3382995 /* Pods-RecycleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

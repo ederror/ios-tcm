@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 import SwiftCSV
+import NMapsMap
 
 struct RecycleItem {
     public var name: String?
@@ -30,14 +31,16 @@ struct LightAndBatteryItem {
 
 
 struct ContentView: View {
+    @ObservedObject var viewModel = NMapViewModel()
     let initVar = DataManager()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-            .onAppear{
-                self.initVar.dataLoad()
-            }
-        
+        ZStack {
+            NMapView()
+        }
+        .onAppear{
+            self.initVar.dataLoad()
+        }
     }
 }
 
@@ -45,4 +48,20 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+struct NMapView : UIViewRepresentable {
+    
+    typealias UIViewType = NMFNaverMapView
+    @ObservedObject var viewModel = NMapViewModel()
+
+    func makeUIView(context: Context) -> NMFNaverMapView {
+        return viewModel.makeMapView()
+    }
+    
+    func updateUIView(_ uiView: NMFNaverMapView, context: Context) {
+        
+    }
+    
+    
 }

@@ -12,13 +12,16 @@ import SwiftCSV
 class DataManager {
     func dataLoad() {
         // change Path for your desktop
-        let filePath = "/Users/inchan/Desktop/data/시트 1-표 2.csv"
-        let filePath2 = "/Users/inchan/Desktop/data/_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv"
+//        let filePath = "/Users/inchan/Desktop/data/시트 1-표 2.csv"
+//        let filePath2 = "/Users/inchan/Desktop/data/_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv"
         
+        // File Path
+        let filePath = Bundle.main.url(forResource: "시트 1-표 2.csv", withExtension: nil)!
+        let filePath2 = Bundle.main.url(forResource: "_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv", withExtension: nil)!
         
         do {
         
-            let csvFile: CSV = try CSV(url: URL(fileURLWithPath: filePath))
+            let csvFile: CSV = try CSV(url: filePath)
             for item in csvFile.namedRows {
                 let recycleItem = RecycleItem(name: item["품목"], id: Int16(item["Id"]!)!, material: item["재질"], recycleWay: item["배출방법"], classId: Int16(item["구분_id"]!)!, classification: item["구분"])
                 PersistenceManager.shared.insertRecycleItem(item: recycleItem)
@@ -44,7 +47,7 @@ class DataManager {
         
         
         do {
-            let csvFile2: CSV = try CSV(url: URL(fileURLWithPath: filePath2))
+            let csvFile2: CSV = try CSV(url: filePath2)
             for item in csvFile2.namedRows {
                 var latitude: Double = 0.0
                 var longitude: Double = 0.0
