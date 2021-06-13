@@ -1,11 +1,11 @@
 //
-//  ViewController.swift
-//  CD_RECYCLE
+//  DataManager.swift
+//  RecycleApp
 //
-//  Created by 백인찬 on 2021/05/06.
+//  Created by 백인찬 on 2021/05/08.
 //
 
-import UIKit
+import Foundation
 import CoreData
 import SwiftCSV
 
@@ -28,19 +28,29 @@ struct LightAndBatteryItem {
     public var type: String?
 }
 
-class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+class DataManager {
+    // File Path
+    let filePath = Bundle.main.url(forResource: "시트 1-표 2.csv", withExtension: nil)!
+    let filePath2 = Bundle.main.url(forResource: "_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv", withExtension: nil)!
+    
+    func dataLoad() {
+        let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()
+        if PersistenceManager.shared.count(request: request)! == 0 {
+            self.insertAll()
+        }
+
+        let LBrequest: NSFetchRequest<LightAndBattery> = LightAndBattery.fetchRequest()
+        print(PersistenceManager.shared.count(request: LBrequest)!)
         
-        // change Path for your desktop
-        let filePath = "/Users/inchan/Desktop/data/시트 1-표 2.csv"
-        let filePath2 = "/Users/inchan/Desktop/data/_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv"
-        
-        
+//        self.deleteAll()
+    }
+    
+    func insertAll() {
+        // insert Recycle
         do {
-        
-            let csvFile: CSV = try CSV(url: URL(fileURLWithPath: filePath))
+            let csvFile: CSV = try CSV(url: filePath)
             for item in csvFile.namedRows {
                 let recycleItem = RecycleItem(name: item["품목"], id: Int16(item["Id"]!)!, material: item["재질"], recycleWay: item["배출방법"], classId: Int16(item["구분_id"]!)!, classification: item["구분"])
                 PersistenceManager.shared.insertRecycleItem(item: recycleItem)
@@ -49,24 +59,9 @@ class ViewController: UIViewController {
             print("parseError")
         }
         
-        let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()
-        let fetchResult = PersistenceManager.shared.fetch(request: request)
-    
-        // code usage of FETCH RESULT
-        
-        print(PersistenceManager.shared.count(request: request)!)
-        
-        if PersistenceManager.shared.deleteAll(request: request, entityName: "Recycle") {
-            print("clean")
-            print("After deleteAll RECYCLE in DB : \(PersistenceManager.shared.count(request: request)!)")
-        } else {
-            print("deleteAll failed")
-        }
-        
-        
-        
+        // insert LB
         do {
-            let csvFile2: CSV = try CSV(url: URL(fileURLWithPath: filePath2))
+            let csvFile2: CSV = try CSV(url: filePath2)
             for item in csvFile2.namedRows {
                 var latitude: Double = 0.0
                 var longitude: Double = 0.0
@@ -84,13 +79,17 @@ class ViewController: UIViewController {
             print("parseError 2 \(error)")
         }
         
+    }
+    func deleteAll() {
+        let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()
+        if PersistenceManager.shared.deleteAll(request: request, entityName: "Recycle") {
+            print("clean")
+            print("After deleteAll RECYCLE in DB : \(PersistenceManager.shared.count(request: request)!)")
+        } else {
+            print("deleteAll failed")
+        }
+        
         let LBrequest: NSFetchRequest<LightAndBattery> = LightAndBattery.fetchRequest()
-        let LBfetchResult = PersistenceManager.shared.fetch(request: LBrequest)
-        
-        // code usage of LB FETCH RESULT
-        
-        print(PersistenceManager.shared.count(request: LBrequest)!)
-        
         if PersistenceManager.shared.deleteAll(request: LBrequest, entityName: "LightAndBattery") {
             print("clean")
             print("After deleteAll LIGHT AND BATTERY in DB : \(PersistenceManager.shared.count(request: LBrequest)!)")
@@ -101,11 +100,12 @@ class ViewController: UIViewController {
     }
 }
 
+
 class PersistenceManager {
     static var shared: PersistenceManager = PersistenceManager()
     
     lazy var persistenceContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "CD_RECYCLE")
+        let container = NSPersistentContainer(name: "RecycleApp")
         container.loadPersistentStores(completionHandler: {(storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -217,4 +217,5 @@ class PersistenceManager {
 
 
 }
+
 
