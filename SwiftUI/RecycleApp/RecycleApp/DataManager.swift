@@ -10,17 +10,25 @@ import CoreData
 import SwiftCSV
 
 class DataManager {
+    // File Path
+    let filePath = Bundle.main.url(forResource: "시트 1-표 2.csv", withExtension: nil)!
+    let filePath2 = Bundle.main.url(forResource: "_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv", withExtension: nil)!
+    
     func dataLoad() {
-        // change Path for your desktop
-//        let filePath = "/Users/inchan/Desktop/data/시트 1-표 2.csv"
-//        let filePath2 = "/Users/inchan/Desktop/data/_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv"
+        let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()
+        if PersistenceManager.shared.count(request: request)! == 0 {
+            self.insertAll()
+        }
+
+        let LBrequest: NSFetchRequest<LightAndBattery> = LightAndBattery.fetchRequest()
+        print(PersistenceManager.shared.count(request: LBrequest)!)
         
-        // File Path
-        let filePath = Bundle.main.url(forResource: "시트 1-표 2.csv", withExtension: nil)!
-        let filePath2 = Bundle.main.url(forResource: "_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv", withExtension: nil)!
-        
+//        self.deleteAll()
+    }
+    
+    func insertAll() {
+        // insert Recycle
         do {
-        
             let csvFile: CSV = try CSV(url: filePath)
             for item in csvFile.namedRows {
                 let recycleItem = RecycleItem(name: item["품목"], id: Int16(item["Id"]!)!, material: item["재질"], recycleWay: item["배출방법"], classId: Int16(item["구분_id"]!)!, classification: item["구분"])
@@ -30,22 +38,7 @@ class DataManager {
             print("parseError")
         }
         
-        let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()
-        let fetchResult = PersistenceManager.shared.fetch(request: request)
-    
-        // code usage of FETCH RESULT
-        
-        print(PersistenceManager.shared.count(request: request)!)
-        
-        if PersistenceManager.shared.deleteAll(request: request, entityName: "Recycle") {
-            print("clean")
-            print("After deleteAll RECYCLE in DB : \(PersistenceManager.shared.count(request: request)!)")
-        } else {
-            print("deleteAll failed")
-        }
-        
-        
-        
+        // insert LB
         do {
             let csvFile2: CSV = try CSV(url: filePath2)
             for item in csvFile2.namedRows {
@@ -65,19 +58,24 @@ class DataManager {
             print("parseError 2 \(error)")
         }
         
+    }
+    func deleteAll() {
+        let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()
+        if PersistenceManager.shared.deleteAll(request: request, entityName: "Recycle") {
+            print("clean")
+            print("After deleteAll RECYCLE in DB : \(PersistenceManager.shared.count(request: request)!)")
+        } else {
+            print("deleteAll failed")
+        }
+        
         let LBrequest: NSFetchRequest<LightAndBattery> = LightAndBattery.fetchRequest()
-        let LBfetchResult = PersistenceManager.shared.fetch(request: LBrequest)
-        
-        // code usage of LB FETCH RESULT
-        
-        print(PersistenceManager.shared.count(request: LBrequest)!)
-        
         if PersistenceManager.shared.deleteAll(request: LBrequest, entityName: "LightAndBattery") {
             print("clean")
             print("After deleteAll LIGHT AND BATTERY in DB : \(PersistenceManager.shared.count(request: LBrequest)!)")
         } else {
             print("deleteAll failed")
         }
+        
     }
 }
 

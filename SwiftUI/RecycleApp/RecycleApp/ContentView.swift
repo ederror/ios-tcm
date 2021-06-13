@@ -32,25 +32,15 @@ struct LightAndBatteryItem {
 
 
 struct ContentView: View {
-    let initVar = DataManager()
     var locationManager = CLLocationManager()
     @ObservedObject var viewModel = NMapViewModel()
     
     var body: some View {
         ZStack {
             NMapView()
-            
-            Button(action: {
-                let coor = locationManager.location?.coordinate
-                print(coor?.latitude)
-                print(coor?.longitude)
-            }) {
-                Text("click")
-            }
         }
         .onAppear{
-            locationManager.requestWhenInUseAuthorization()
-            self.initVar.dataLoad()
+            locationManager.requestWhenInUseAuthorization()  
         }
     }
 }
@@ -67,6 +57,9 @@ struct NMapView : UIViewRepresentable {
     @ObservedObject var viewModel = NMapViewModel()
 
     func makeUIView(context: Context) -> NMFNaverMapView {
+        let DM = DataManager()
+        DM.dataLoad()
+        
         viewModel.mapView.showCompass = true
         viewModel.mapView.showZoomControls = true
         viewModel.mapView.showLocationButton = true
@@ -75,9 +68,38 @@ struct NMapView : UIViewRepresentable {
         
         let LO = viewModel.mapView.mapView.locationOverlay
         LO.hidden = false
+        LO.location = NMGLatLng(lat: 37.65893337125361, lng: 127.0414481846587)
         
-//        mapView.mapView.moveCamera(CU)
+        let CU = NMFCameraUpdate(scrollTo: LO.location)
+        viewModel.mapView.mapView.moveCamera(CU)
 
+        let marker = NMFMarker()
+        
+        marker.position = LO.location
+        marker.mapView = viewModel.mapView.mapView
+        
+        let targets = viewModel.getNearLB(current: LO.location)
+        
+//        for target in targets["형광등"]! {
+//            let mk = NMFMarker()
+//            mk.position = target
+//            mk.iconImage = NMF_MARKER_IMAGE_BLACK
+//            mk.iconTintColor = UIColor.blue
+//            print(mk.width)
+//            print(mk.height)
+//            mk.mapView = viewModel.mapView.mapView
+//        }
+        
+        for target in targets["건전지"]! {
+            let mk = NMFMarker()
+            mk.position = target
+            mk.iconImage = NMF_MARKER_IMAGE_BLACK
+            mk.iconTintColor = UIColor.blue
+            mk.width = 25
+            mk.height = 40
+            mk.mapView = viewModel.mapView.mapView
+        }
+        
         return viewModel.mapView
     }
     

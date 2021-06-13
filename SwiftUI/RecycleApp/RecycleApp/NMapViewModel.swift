@@ -9,16 +9,51 @@ import Foundation
 import NMapsMap
 import Alamofire
 import UIKit
+import CoreData
 
 class NMapViewModel :ObservableObject {
-    var coord = NMGLatLng(lat: 37.5670135, lng: 126.9783740)
+    
     var NAVER_CLIENT_ID = "h3rb8msxcn"
     var NAVER_CLIENT_SECRET = "IKP3DF4F0p0QoESjWvGt6zDRdJ0m3eMgbn3Q0iJT"
     var NAVER_GEOCODE_URL = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query="
-    var myAddress = "서울시 강서구 화곡동 24-80"
     var myAddressCoord: NMGLatLng!
     var marker = NMFMarker()
     @Published var mapView = NMFNaverMapView()
+    
+    func getNearLB(current: NMGLatLng) -> [String : [NMGLatLng]] {
+        let LBrequest: NSFetchRequest<LightAndBattery> = LightAndBattery.fetchRequest()
+        let LBfetchResult = PersistenceManager.shared.fetch(request: LBrequest)
+        
+        let lat_left = current.lat - 0.005
+        let lat_right = current.lat + 0.005
+        let lng_top = current.lng + 0.006
+        let lng_bot = current.lng - 0.006
+        
+        var targets: [String : [NMGLatLng]] = [ : ]
+        var Ltargets: [NMGLatLng] = []
+        var Btargets: [NMGLatLng] = []
+        
+        for item in LBfetchResult {
+            if item.latitude == 0.0 {
+                continue
+            }
+            if item.latitude <= lat_right && item.latitude >= lat_left {
+                if item.longitude <= lng_top && item.longitude >= lng_bot {
+                    let target = NMGLatLng(lat: item.latitude, lng: item.longitude)
+                    if item.type == "폐건전지" {
+                        Btargets.append(target)
+                    }
+                    else {
+                        Ltargets.append(target)
+                    }
+                }
+            }
+        }
+        targets["건전지"] = Btargets
+        targets["형광등"] = Ltargets
+        
+        return targets
+    }
     
     func makeMapView() -> NMFNaverMapView {
         
