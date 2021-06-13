@@ -9,6 +9,27 @@ import Foundation
 import CoreData
 import SwiftCSV
 
+struct RecycleItem {
+    public var name: String?
+    public var id: Int16
+    public var material: String?
+    public var recycleWay: String?
+    public var classId: Int16
+    public var classification: String?
+}
+
+struct LightAndBatteryItem {
+    public var boroughId: Int16
+    public var borough: String?
+    public var latitude: Double
+    public var longitude: Double
+    public var address: String?
+    public var detailAddress: String?
+    public var type: String?
+}
+
+
+
 class DataManager {
     // File Path
     let filePath = Bundle.main.url(forResource: "시트 1-표 2.csv", withExtension: nil)!

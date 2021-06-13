@@ -11,26 +11,6 @@ import SwiftCSV
 import NMapsMap
 import CoreLocation
 
-struct RecycleItem {
-    public var name: String?
-    public var id: Int16
-    public var material: String?
-    public var recycleWay: String?
-    public var classId: Int16
-    public var classification: String?
-}
-
-struct LightAndBatteryItem {
-    public var boroughId: Int16
-    public var borough: String?
-    public var latitude: Double
-    public var longitude: Double
-    public var address: String?
-    public var detailAddress: String?
-    public var type: String?
-}
-
-
 struct ContentView: View {
     var locationManager = CLLocationManager()
     @ObservedObject var viewModel = NMapViewModel()
@@ -79,6 +59,9 @@ struct NMapView : UIViewRepresentable {
         marker.mapView = viewModel.mapView.mapView
         
         let targets = viewModel.getNearLB(current: LO.location)
+        let coords = targets.0
+        let addrs = targets.1["주소"]!
+
         
 //        for target in targets["형광등"]! {
 //            let mk = NMFMarker()
@@ -89,8 +72,8 @@ struct NMapView : UIViewRepresentable {
 //            print(mk.height)
 //            mk.mapView = viewModel.mapView.mapView
 //        }
-        
-        for target in targets["건전지"]! {
+        var n = 0
+        for target in coords["건전지"]! {
             let mk = NMFMarker()
             mk.position = target
             mk.iconImage = NMF_MARKER_IMAGE_BLACK
@@ -98,6 +81,26 @@ struct NMapView : UIViewRepresentable {
             mk.width = 25
             mk.height = 40
             mk.mapView = viewModel.mapView.mapView
+            
+            mk.userInfo = ["tag" : addrs[n]]
+            
+            mk.touchHandler = { (overlay) -> Bool in
+                if let MARKER = overlay as? NMFMarker {
+                    if MARKER.infoWindow == nil {
+                        let dataSource = NMFInfoWindowDefaultTextSource.data()
+                        dataSource.title = MARKER.userInfo["tag"] as! String
+                        let infoWindow = NMFInfoWindow()
+                        infoWindow.dataSource = dataSource
+                        infoWindow.open(with: MARKER)
+                    }
+                    else {
+                        MARKER.infoWindow?.close()
+                    }
+                }
+                return true
+            }
+
+            n += 1
         }
         
         return viewModel.mapView

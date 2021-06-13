@@ -20,7 +20,7 @@ class NMapViewModel :ObservableObject {
     var marker = NMFMarker()
     @Published var mapView = NMFNaverMapView()
     
-    func getNearLB(current: NMGLatLng) -> [String : [NMGLatLng]] {
+    func getNearLB(current: NMGLatLng) -> ([String : [NMGLatLng]], [String : [String]]) {
         let LBrequest: NSFetchRequest<LightAndBattery> = LightAndBattery.fetchRequest()
         let LBfetchResult = PersistenceManager.shared.fetch(request: LBrequest)
         
@@ -29,6 +29,8 @@ class NMapViewModel :ObservableObject {
         let lng_top = current.lng + 0.006
         let lng_bot = current.lng - 0.006
         
+        var targets_addr: [String : [String]] = [ : ]
+        var addrs: [String] = []
         var targets: [String : [NMGLatLng]] = [ : ]
         var Ltargets: [NMGLatLng] = []
         var Btargets: [NMGLatLng] = []
@@ -40,6 +42,8 @@ class NMapViewModel :ObservableObject {
             if item.latitude <= lat_right && item.latitude >= lat_left {
                 if item.longitude <= lng_top && item.longitude >= lng_bot {
                     let target = NMGLatLng(lat: item.latitude, lng: item.longitude)
+                    let addr = "\(String(describing: item.address!)) \(String(describing: item.detailAddress!))"
+                    addrs.append(addr)
                     if item.type == "폐건전지" {
                         Btargets.append(target)
                     }
@@ -49,10 +53,12 @@ class NMapViewModel :ObservableObject {
                 }
             }
         }
+        
+        targets_addr["주소"] = addrs
         targets["건전지"] = Btargets
         targets["형광등"] = Ltargets
         
-        return targets
+        return (targets, targets_addr)
     }
     
     func makeMapView() -> NMFNaverMapView {
