@@ -18,7 +18,6 @@
 		381956232642FEB0001A9F2A /* Recycle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381956212642FEB0001A9F2A /* Recycle+CoreDataProperties.swift */; };
 		381956272643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */ = {isa = PBXBuildFile; fileRef = 381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */; };
 		381956282643058D001A9F2A /* 시트 1-표 2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 381956262643058D001A9F2A /* 시트 1-표 2.csv */; };
-		383B257D2679B78C00EC2A58 /* SecondChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B257B2679B78C00EC2A58 /* SecondChildViewController.swift */; };
 		383B257E2679B78C00EC2A58 /* FirstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */; };
 		383B25802679C60700EC2A58 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B257F2679C60700EC2A58 /* DataManager.swift */; };
 		383B25872679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv in Resources */ = {isa = PBXBuildFile; fileRef = 383B25852679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv */; };
@@ -27,8 +26,9 @@
 		383B25962679CA7800EC2A58 /* IcePack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25922679CA7800EC2A58 /* IcePack+CoreDataProperties.swift */; };
 		383B25972679CA7800EC2A58 /* TrashCan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25932679CA7800EC2A58 /* TrashCan+CoreDataClass.swift */; };
 		383B25982679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25942679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift */; };
-		383B259A2679D1A600EC2A58 /* ThirdChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25992679D1A600EC2A58 /* ThirdChildViewController.swift */; };
-		383B259C2679D1B400EC2A58 /* FourthChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B259B2679D1B400EC2A58 /* FourthChildViewController.swift */; };
+		383B259A2679D1A600EC2A58 /* SecondChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25992679D1A600EC2A58 /* SecondChildViewController.swift */; };
+		383B259C2679D1B400EC2A58 /* ThirdChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B259B2679D1B400EC2A58 /* ThirdChildViewController.swift */; };
+		383B259E2679DDB200EC2A58 /* FourthChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B259D2679DDB200EC2A58 /* FourthChildViewController.swift */; };
 		38A9C3E32643A91F00576AA6 /* EnumeratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B52643A91F00576AA6 /* EnumeratedView.swift */; };
 		38A9C3E42643A91F00576AA6 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B62643A91F00576AA6 /* Description.swift */; };
 		38A9C3E52643A91F00576AA6 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B72643A91F00576AA6 /* CSV.swift */; };
@@ -85,7 +85,6 @@
 		381956212642FEB0001A9F2A /* Recycle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recycle+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv"; sourceTree = "<group>"; };
 		381956262643058D001A9F2A /* 시트 1-표 2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "시트 1-표 2.csv"; sourceTree = "<group>"; };
-		383B257B2679B78C00EC2A58 /* SecondChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondChildViewController.swift; sourceTree = "<group>"; };
 		383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstChildViewController.swift; sourceTree = "<group>"; };
 		383B257F2679C60700EC2A58 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../SwiftUI/RecycleApp/RecycleApp/DataManager.swift; sourceTree = "<group>"; };
 		383B25852679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "도봉구가로쓰레기통.csv"; path = "../../../../../../data/도봉구가로쓰레기통.csv"; sourceTree = "<group>"; };
@@ -94,8 +93,9 @@
 		383B25922679CA7800EC2A58 /* IcePack+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IcePack+CoreDataProperties.swift"; path = "CD_RECYCLE/IcePack+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		383B25932679CA7800EC2A58 /* TrashCan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrashCan+CoreDataClass.swift"; path = "CD_RECYCLE/TrashCan+CoreDataClass.swift"; sourceTree = "<group>"; };
 		383B25942679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrashCan+CoreDataProperties.swift"; path = "CD_RECYCLE/TrashCan+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		383B25992679D1A600EC2A58 /* ThirdChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdChildViewController.swift; sourceTree = "<group>"; };
-		383B259B2679D1B400EC2A58 /* FourthChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthChildViewController.swift; sourceTree = "<group>"; };
+		383B25992679D1A600EC2A58 /* SecondChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChildViewController.swift; sourceTree = "<group>"; };
+		383B259B2679D1B400EC2A58 /* ThirdChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdChildViewController.swift; sourceTree = "<group>"; };
+		383B259D2679DDB200EC2A58 /* FourthChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthChildViewController.swift; sourceTree = "<group>"; };
 		38A9C3B52643A91F00576AA6 /* EnumeratedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumeratedView.swift; sourceTree = "<group>"; };
 		38A9C3B62643A91F00576AA6 /* Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 		38A9C3B72643A91F00576AA6 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
@@ -189,9 +189,9 @@
 				383B257F2679C60700EC2A58 /* DataManager.swift */,
 				84849A522670AF57000CA8BA /* MapViewController.swift */,
 				383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */,
-				383B257B2679B78C00EC2A58 /* SecondChildViewController.swift */,
-				383B25992679D1A600EC2A58 /* ThirdChildViewController.swift */,
-				383B259B2679D1B400EC2A58 /* FourthChildViewController.swift */,
+				383B25992679D1A600EC2A58 /* SecondChildViewController.swift */,
+				383B259B2679D1B400EC2A58 /* ThirdChildViewController.swift */,
+				383B259D2679DDB200EC2A58 /* FourthChildViewController.swift */,
 				381956242643058D001A9F2A /* data */,
 				381955F32642FC99001A9F2A /* Main.storyboard */,
 				381955F92642FC9A001A9F2A /* Assets.xcassets */,
@@ -519,16 +519,16 @@
 				383B25972679CA7800EC2A58 /* TrashCan+CoreDataClass.swift in Sources */,
 				383B25982679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift in Sources */,
 				38A9C3E52643A91F00576AA6 /* CSV.swift in Sources */,
-				383B259A2679D1A600EC2A58 /* ThirdChildViewController.swift in Sources */,
+				383B259A2679D1A600EC2A58 /* SecondChildViewController.swift in Sources */,
 				383B25802679C60700EC2A58 /* DataManager.swift in Sources */,
 				381955F82642FC99001A9F2A /* CD_RECYCLE.xcdatamodeld in Sources */,
 				38A9C3FD2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift in Sources */,
-				383B257D2679B78C00EC2A58 /* SecondChildViewController.swift in Sources */,
 				381955F22642FC99001A9F2A /* ViewController.swift in Sources */,
 				381956222642FEB0001A9F2A /* Recycle+CoreDataClass.swift in Sources */,
 				381955EE2642FC99001A9F2A /* AppDelegate.swift in Sources */,
 				381956232642FEB0001A9F2A /* Recycle+CoreDataProperties.swift in Sources */,
 				381955F02642FC99001A9F2A /* SceneDelegate.swift in Sources */,
+				383B259E2679DDB200EC2A58 /* FourthChildViewController.swift in Sources */,
 				383B257E2679B78C00EC2A58 /* FirstChildViewController.swift in Sources */,
 				38A9C3E32643A91F00576AA6 /* EnumeratedView.swift in Sources */,
 				383B25962679CA7800EC2A58 /* IcePack+CoreDataProperties.swift in Sources */,
@@ -541,7 +541,7 @@
 				38A9C3E62643A91F00576AA6 /* String+Lines.swift in Sources */,
 				38A9C3E42643A91F00576AA6 /* Description.swift in Sources */,
 				84849A532670AF57000CA8BA /* MapViewController.swift in Sources */,
-				383B259C2679D1B400EC2A58 /* FourthChildViewController.swift in Sources */,
+				383B259C2679D1B400EC2A58 /* ThirdChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

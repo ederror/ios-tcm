@@ -106,29 +106,9 @@ class DataManager {
             print("parseError 2 \(error)")
         }
         
-        // insert IcePack
-        do {
-            let csvFile: CSV = try CSV(url: filePath3)
-            for item in csvFile.namedRows {
-                var latitude: Double = 0.0
-                var longitude: Double = 0.0
-                if let lat = item["위도"], let doubleLat = Double(lat) {
-                    latitude = doubleLat
-                }
-                if let long = item["경도"], let doubleLong = Double(long) {
-                    longitude = doubleLong
-                }
-                let IPItem = IcePackItem(id: Int16(item["연번"]!) as! Int16, borough: item["구"], type: item["유형"], address: item["주소"], detailAddress: item["세부위치"], latitude: latitude, longitude: longitude)
-                
-                PersistenceManager.shared.insertIcePackItem(item: IPItem)
-            }
-        } catch {
-            print("parseError 3 \(error)")
-        }
-        
         // insert TrashCan
         do {
-            let csvFile: CSV = try CSV(url: filePath4)
+            let csvFile: CSV = try CSV(url: filePath3)
             for item in csvFile.namedRows {
                 var latitude: Double = 0.0
                 var longitude: Double = 0.0
@@ -143,8 +123,29 @@ class DataManager {
                 PersistenceManager.shared.insertTrashCanItem(item: TCItem)
             }
         } catch {
+            print("parseError 3 \(error)")
+        }
+        
+        // insert IcePack
+        do {
+            let csvFile: CSV = try CSV(url: filePath4)
+            for item in csvFile.namedRows {
+                var latitude: Double = 0.0
+                var longitude: Double = 0.0
+                if let lat = item["위도"], let doubleLat = Double(lat) {
+                    latitude = doubleLat
+                }
+                if let long = item["경도"], let doubleLong = Double(long) {
+                    longitude = doubleLong
+                }
+                let IPItem = IcePackItem(id: Int16(item["연번"]!) as! Int16, borough: item["구"], type: item["유형"], address: item["주소"], detailAddress: item["세부위치"], latitude: latitude, longitude: longitude)
+                
+                PersistenceManager.shared.insertIcePackItem(item: IPItem)
+            }
+        } catch {
             print("parseError 4 \(error)")
         }
+        
     }
     func deleteAll() {
         let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()

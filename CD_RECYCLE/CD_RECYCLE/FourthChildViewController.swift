@@ -1,5 +1,5 @@
 //
-//  FourthChildViewController.swift
+//  FifthChildViewController.swift
 //  CD_RECYCLE
 //
 //  Created by 백인찬 on 2021/06/16.
@@ -9,15 +9,13 @@ import UIKit
 import NMapsMap
 import CoreData
 
-class ThirdChildViewController: UIViewController { // 폐형광등
+class FourthChildViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let mapView = NMFNaverMapView(frame: CGRect(x: view.frame.origin.x, y: view.frame.origin.y,
                                                     width: 329.0, height: 516.0))
-        
-        // Do any additional setup after loading the view.
         
         mapView.showCompass = true
         mapView.showScaleBar = true
@@ -30,7 +28,7 @@ class ThirdChildViewController: UIViewController { // 폐형광등
         let CU = NMFCameraUpdate(scrollTo: LO.location)
         mapView.mapView.moveCamera(CU)
         
-        let targets = self.getNearL(current: LO.location)
+        let targets = self.getNearIP(current: LO.location)
         let coords = targets.0
         let addrs = targets.1["주소"]!
         
@@ -68,9 +66,9 @@ class ThirdChildViewController: UIViewController { // 폐형광등
         view.bringSubviewToFront(mapView)
     }
     
-    func getNearL(current: NMGLatLng) -> ([NMGLatLng], [String : [String]]) {
-        let LBrequest: NSFetchRequest<LightAndBattery> = LightAndBattery.fetchRequest()
-        let LBfetchResult = PersistenceManager.shared.fetch(request: LBrequest)
+    func getNearIP(current: NMGLatLng) -> ([NMGLatLng], [String : [String]]) {
+        let IPrequest: NSFetchRequest<IcePack> = IcePack.fetchRequest()
+        let IPfetchResult = PersistenceManager.shared.fetch(request: IPrequest)
         
         let lat_left = current.lat - 0.005
         let lat_right = current.lat + 0.005
@@ -79,9 +77,9 @@ class ThirdChildViewController: UIViewController { // 폐형광등
         
         var targets_addr: [String : [String]] = [ : ]
         var addrs: [String] = []
-        var Ltargets: [NMGLatLng] = []
+        var targets: [NMGLatLng] = []
         
-        for item in LBfetchResult {
+        for item in IPfetchResult {
             if item.latitude == 0.0 {
                 continue
             }
@@ -90,17 +88,16 @@ class ThirdChildViewController: UIViewController { // 폐형광등
                     let target = NMGLatLng(lat: item.latitude, lng: item.longitude)
                     let addr = "\(String(describing: item.address!)) \(String(describing: item.detailAddress!))"
                     addrs.append(addr)
-                    if item.type == "폐형광등" {
-                        Ltargets.append(target)
-                    }
+                    targets.append(target)
                 }
             }
         }
         
         targets_addr["주소"] = addrs
         
-        return (Ltargets, targets_addr)
+        return (targets, targets_addr)
     }
+
     /*
     // MARK: - Navigation
 

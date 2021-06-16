@@ -29,6 +29,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        view.bringSubviewToFront(viewContainer)
         
         viewContainer.addSubview(firstVC.view)
         viewContainer.addSubview(secondVC.view)
@@ -54,7 +55,7 @@ class MapViewController: UIViewController {
     // segControl에서 선택된 항목이 변경되면 호출되는 함수입니다.
     @IBAction func segSelect(_ sender: Any) {
         
-        lbl.text = "현재선택은 \(String(describing: segControl.titleForSegment(at: segControl.selectedSegmentIndex))) 입니다."
+//        lbl.text = "현재선택은 \(String(describing: segControl.titleForSegment(at: segControl.selectedSegmentIndex))) 입니다."
         
         /*
          인덱스를 이용해 아래와 같이 조건문을 이용할 수 있습니다.
@@ -76,7 +77,7 @@ class MapViewController: UIViewController {
         else if segControl.selectedSegmentIndex == 3 {
             viewContainer.bringSubviewToFront(fourthVC.view)
         }
-        
+
         /*
          5개 항목 각각에 따로 ViewController를 만들 수 있어서,
          만약 첫번째 VC에는 일반쓰레기, 세번째 VC는 폐건전지 수거함이 표시된 지도 등을
@@ -92,4 +93,5 @@ class MapViewController: UIViewController {
         
     }
 
+    
 }

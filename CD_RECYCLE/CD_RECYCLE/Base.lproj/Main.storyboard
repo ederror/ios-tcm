@@ -119,30 +119,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MZQ-Du-1XH">
-                                <rect key="frame" x="20" y="113" width="329" height="32"/>
+                                <rect key="frame" x="16" y="63" width="343" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="일반쓰레기"/>
-                                    <segment title="분리수거"/>
+                                    <segment title="쓰레기통"/>
                                     <segment title="폐건전지"/>
+                                    <segment title="폐형광등"/>
                                     <segment title="아이스팩"/>
-                                    <segment title="헌 옷"/>
                                 </segments>
                                 <connections>
                                     <action selector="segSelect:" destination="oFB-an-kKR" eventType="valueChanged" id="WFg-2v-IN5"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wu-W5-1bt">
-                                <rect key="frame" x="40" y="175" width="335" height="21"/>
+                                <rect key="frame" x="24" y="102" width="335" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llc-UA-cdq">
-                                <rect key="frame" x="20" y="204" width="329" height="419"/>
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llc-UA-cdq">
+                                <rect key="frame" x="16" y="131" width="329" height="516"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0TG-A8-5PI"/>
