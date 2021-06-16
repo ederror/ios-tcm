@@ -1,8 +1,0 @@
-## Xcode Patch
-*.xcodeproj/*
-!*.xcodeproj/prject.pdxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
-
-### Xcode Patch ###
-**/xcshareddata/WorkspaceSettings.xcsettings
