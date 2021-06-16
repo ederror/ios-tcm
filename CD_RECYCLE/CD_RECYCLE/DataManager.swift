@@ -57,96 +57,96 @@ class DataManager {
     let filePath4 = Bundle.main.url(forResource: "도봉구아이스팩.csv", withExtension: nil)!
     
     func dataLoad() {
-        let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()
-        self.deleteAll()
-        if PersistenceManager.shared.count(request: request)! == 0 {
-            self.insertAll()
-        }
-
-        let LBrequest: NSFetchRequest<LightAndBattery> = LightAndBattery.fetchRequest()
-        print(PersistenceManager.shared.count(request: LBrequest)!)
-        
-        let IPrequest: NSFetchRequest<IcePack> = IcePack.fetchRequest()
-        print(PersistenceManager.shared.count(request: IPrequest)!)
-        
-        let TCrequest: NSFetchRequest<TrashCan> = TrashCan.fetchRequest()
-        print(PersistenceManager.shared.count(request: TCrequest)!)
-//        self.deleteAll()
+        self.insertAll()
     }
     
     func insertAll() {
+        let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()
+        let LBrequest: NSFetchRequest<LightAndBattery> = LightAndBattery.fetchRequest()
+        let IPrequest: NSFetchRequest<IcePack> = IcePack.fetchRequest()
+        let TCrequest: NSFetchRequest<TrashCan> = TrashCan.fetchRequest()
+        
         // insert Recycle
-        do {
-            let csvFile: CSV = try CSV(url: filePath)
-            for item in csvFile.namedRows {
-                let recycleItem = RecycleItem(name: item["품목"], id: Int16(item["Id"]!)!, material: item["재질"], recycleWay: item["배출방법"], classId: Int16(item["구분_id"]!)!, classification: item["구분"])
-                PersistenceManager.shared.insertRecycleItem(item: recycleItem)
+        if PersistenceManager.shared.count(request: request) == 0 {
+            do {
+                let csvFile: CSV = try CSV(url: filePath)
+                for item in csvFile.namedRows {
+                    let recycleItem = RecycleItem(name: item["품목"], id: Int16(item["Id"]!)!, material: item["재질"], recycleWay: item["배출방법"], classId: Int16(item["구분_id"]!)!, classification: item["구분"])
+                    PersistenceManager.shared.insertRecycleItem(item: recycleItem)
+                }
+            } catch {
+                print("parseError")
             }
-        } catch {
-            print("parseError")
         }
         
         // insert LB
-        do {
-            let csvFile2: CSV = try CSV(url: filePath2)
-            for item in csvFile2.namedRows {
-                var latitude: Double = 0.0
-                var longitude: Double = 0.0
-                if let lat = item["위도"], let doubleLat = Double(lat) {
-                    latitude = doubleLat
+        if PersistenceManager.shared.count(request: LBrequest) == 0 {
+            do {
+                let csvFile2: CSV = try CSV(url: filePath2)
+                for item in csvFile2.namedRows {
+                    var latitude: Double = 0.0
+                    var longitude: Double = 0.0
+                    if let lat = item["위도"], let doubleLat = Double(lat) {
+                        latitude = doubleLat
+                    }
+                    if let long = item["경도"], let doubleLong = Double(long) {
+                        longitude = doubleLong
+                    }
+                    let LBItem = LightAndBatteryItem(boroughId: Int16(item["연번"]!) as! Int16, borough: item["구"], latitude: latitude, longitude: longitude, address: item["주소"], detailAddress: item["세부 위치"], type: item["유형"])
+                    
+                    PersistenceManager.shared.insertLightAndBatteryItem(item: LBItem)
                 }
-                if let long = item["경도"], let doubleLong = Double(long) {
-                    longitude = doubleLong
-                }
-                let LBItem = LightAndBatteryItem(boroughId: Int16(item["연번"]!) as! Int16, borough: item["구"], latitude: latitude, longitude: longitude, address: item["주소"], detailAddress: item["세부 위치"], type: item["유형"])
-                
-                PersistenceManager.shared.insertLightAndBatteryItem(item: LBItem)
+            } catch {
+                print("parseError 2 \(error)")
             }
-        } catch {
-            print("parseError 2 \(error)")
         }
         
         // insert TrashCan
-        do {
-            let csvFile: CSV = try CSV(url: filePath3)
-            for item in csvFile.namedRows {
-                var latitude: Double = 0.0
-                var longitude: Double = 0.0
-                if let lat = item["위도"], let doubleLat = Double(lat) {
-                    latitude = doubleLat
+        if PersistenceManager.shared.count(request: TCrequest) == 0 {
+            do {
+                let csvFile: CSV = try CSV(url: filePath3)
+                for item in csvFile.namedRows {
+                    var latitude: Double = 0.0
+                    var longitude: Double = 0.0
+                    if let lat = item["위도"], let doubleLat = Double(lat) {
+                        latitude = doubleLat
+                    }
+                    if let long = item["경도"], let doubleLong = Double(long) {
+                        longitude = doubleLong
+                    }
+                    let TCItem = TrashCanItem(id: Int16(item["연번"]!) as! Int16, borough: item["구"], address: item["주소"], detailAddress: item["세부위치"], type: item["유형"], latitude: latitude, longitude: longitude)
+                    
+                    PersistenceManager.shared.insertTrashCanItem(item: TCItem)
                 }
-                if let long = item["경도"], let doubleLong = Double(long) {
-                    longitude = doubleLong
-                }
-                let TCItem = TrashCanItem(id: Int16(item["연번"]!) as! Int16, borough: item["구"], address: item["주소"], detailAddress: item["세부위치"], type: item["유형"], latitude: latitude, longitude: longitude)
-                
-                PersistenceManager.shared.insertTrashCanItem(item: TCItem)
+            } catch {
+                print("parseError 3 \(error)")
             }
-        } catch {
-            print("parseError 3 \(error)")
         }
         
         // insert IcePack
-        do {
-            let csvFile: CSV = try CSV(url: filePath4)
-            for item in csvFile.namedRows {
-                var latitude: Double = 0.0
-                var longitude: Double = 0.0
-                if let lat = item["위도"], let doubleLat = Double(lat) {
-                    latitude = doubleLat
+        if PersistenceManager.shared.count(request: IPrequest) == 0 {
+            do {
+                let csvFile: CSV = try CSV(url: filePath4)
+                for item in csvFile.namedRows {
+                    var latitude: Double = 0.0
+                    var longitude: Double = 0.0
+                    if let lat = item["위도"], let doubleLat = Double(lat) {
+                        latitude = doubleLat
+                    }
+                    if let long = item["경도"], let doubleLong = Double(long) {
+                        longitude = doubleLong
+                    }
+                    let IPItem = IcePackItem(id: Int16(item["연번"]!) as! Int16, borough: item["구"], type: item["유형"], address: item["주소"], detailAddress: item["세부위치"], latitude: latitude, longitude: longitude)
+                    
+                    PersistenceManager.shared.insertIcePackItem(item: IPItem)
                 }
-                if let long = item["경도"], let doubleLong = Double(long) {
-                    longitude = doubleLong
-                }
-                let IPItem = IcePackItem(id: Int16(item["연번"]!) as! Int16, borough: item["구"], type: item["유형"], address: item["주소"], detailAddress: item["세부위치"], latitude: latitude, longitude: longitude)
-                
-                PersistenceManager.shared.insertIcePackItem(item: IPItem)
+            } catch {
+                print("parseError 4 \(error)")
             }
-        } catch {
-            print("parseError 4 \(error)")
         }
         
     }
+    
     func deleteAll() {
         let request: NSFetchRequest<Recycle> = Recycle.fetchRequest()
         if PersistenceManager.shared.deleteAll(request: request, entityName: "Recycle") {

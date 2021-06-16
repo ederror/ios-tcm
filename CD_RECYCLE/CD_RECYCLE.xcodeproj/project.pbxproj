@@ -19,7 +19,6 @@
 		381956272643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */ = {isa = PBXBuildFile; fileRef = 381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */; };
 		381956282643058D001A9F2A /* 시트 1-표 2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 381956262643058D001A9F2A /* 시트 1-표 2.csv */; };
 		383B257E2679B78C00EC2A58 /* FirstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */; };
-		383B25802679C60700EC2A58 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B257F2679C60700EC2A58 /* DataManager.swift */; };
 		383B25872679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv in Resources */ = {isa = PBXBuildFile; fileRef = 383B25852679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv */; };
 		383B25882679C8DB00EC2A58 /* 도봉구아이스팩.csv in Resources */ = {isa = PBXBuildFile; fileRef = 383B25862679C8DB00EC2A58 /* 도봉구아이스팩.csv */; };
 		383B25952679CA7800EC2A58 /* IcePack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25912679CA7800EC2A58 /* IcePack+CoreDataClass.swift */; };
@@ -40,6 +39,7 @@
 		38A9C3FA2643B00300576AA6 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 38A9C3F92643B00300576AA6 /* SwiftCSV */; };
 		38A9C3FD2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */; };
 		38A9C3FE2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */; };
+		38D927182679E45B005CD555 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D927172679E45B005CD555 /* DataManager.swift */; };
 		6F2CD16580FF2C0A383DA0EC /* Pods_CD_RECYCLETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6F5598DDA3BC5BF20E6039 /* Pods_CD_RECYCLETests.framework */; };
 		7149BF4ADF1A7BE1F002243D /* Pods_CD_RECYCLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F3CF017DF3179868658621 /* Pods_CD_RECYCLE.framework */; };
 		84849A512670A040000CA8BA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84849A502670A040000CA8BA /* CameraViewController.swift */; };
@@ -87,7 +87,6 @@
 		381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv"; sourceTree = "<group>"; };
 		381956262643058D001A9F2A /* 시트 1-표 2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "시트 1-표 2.csv"; sourceTree = "<group>"; };
 		383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstChildViewController.swift; sourceTree = "<group>"; };
-		383B257F2679C60700EC2A58 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../SwiftUI/RecycleApp/RecycleApp/DataManager.swift; sourceTree = "<group>"; };
 		383B25852679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "도봉구가로쓰레기통.csv"; path = "../../../../../../data/도봉구가로쓰레기통.csv"; sourceTree = "<group>"; };
 		383B25862679C8DB00EC2A58 /* 도봉구아이스팩.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "도봉구아이스팩.csv"; sourceTree = "<group>"; };
 		383B25912679CA7800EC2A58 /* IcePack+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IcePack+CoreDataClass.swift"; path = "CD_RECYCLE/IcePack+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -114,6 +113,7 @@
 		38A9C3F72643AF6D00576AA6 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightAndBattery+CoreDataClass.swift"; sourceTree = "<group>"; };
 		38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightAndBattery+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		38D927172679E45B005CD555 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		84849A502670A040000CA8BA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		84849A522670AF57000CA8BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		84849A542670D7C5000CA8BA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -188,8 +188,8 @@
 				381955ED2642FC99001A9F2A /* AppDelegate.swift */,
 				381955EF2642FC99001A9F2A /* SceneDelegate.swift */,
 				381955F12642FC99001A9F2A /* ViewController.swift */,
+				38D927172679E45B005CD555 /* DataManager.swift */,
 				84849A502670A040000CA8BA /* CameraViewController.swift */,
-				383B257F2679C60700EC2A58 /* DataManager.swift */,
 				84849A522670AF57000CA8BA /* MapViewController.swift */,
 				383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */,
 				383B25992679D1A600EC2A58 /* SecondChildViewController.swift */,
@@ -524,7 +524,6 @@
 				383B25982679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift in Sources */,
 				38A9C3E52643A91F00576AA6 /* CSV.swift in Sources */,
 				383B259A2679D1A600EC2A58 /* SecondChildViewController.swift in Sources */,
-				383B25802679C60700EC2A58 /* DataManager.swift in Sources */,
 				381955F82642FC99001A9F2A /* CD_RECYCLE.xcdatamodeld in Sources */,
 				38A9C3FD2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift in Sources */,
 				381955F22642FC99001A9F2A /* ViewController.swift in Sources */,
@@ -532,6 +531,7 @@
 				381955EE2642FC99001A9F2A /* AppDelegate.swift in Sources */,
 				381956232642FEB0001A9F2A /* Recycle+CoreDataProperties.swift in Sources */,
 				381955F02642FC99001A9F2A /* SceneDelegate.swift in Sources */,
+				38D927182679E45B005CD555 /* DataManager.swift in Sources */,
 				383B259E2679DDB200EC2A58 /* FourthChildViewController.swift in Sources */,
 				383B257E2679B78C00EC2A58 /* FirstChildViewController.swift in Sources */,
 				38A9C3E32643A91F00576AA6 /* EnumeratedView.swift in Sources */,
