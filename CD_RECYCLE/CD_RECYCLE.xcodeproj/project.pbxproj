@@ -29,6 +29,7 @@
 		383B259A2679D1A600EC2A58 /* SecondChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25992679D1A600EC2A58 /* SecondChildViewController.swift */; };
 		383B259C2679D1B400EC2A58 /* ThirdChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B259B2679D1B400EC2A58 /* ThirdChildViewController.swift */; };
 		383B259E2679DDB200EC2A58 /* FourthChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B259D2679DDB200EC2A58 /* FourthChildViewController.swift */; };
+		383B25A02679E24B00EC2A58 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 383B259F2679E24B00EC2A58 /* .gitignore */; };
 		38A9C3E32643A91F00576AA6 /* EnumeratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B52643A91F00576AA6 /* EnumeratedView.swift */; };
 		38A9C3E42643A91F00576AA6 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B62643A91F00576AA6 /* Description.swift */; };
 		38A9C3E52643A91F00576AA6 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B72643A91F00576AA6 /* CSV.swift */; };
@@ -96,6 +97,7 @@
 		383B25992679D1A600EC2A58 /* SecondChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChildViewController.swift; sourceTree = "<group>"; };
 		383B259B2679D1B400EC2A58 /* ThirdChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdChildViewController.swift; sourceTree = "<group>"; };
 		383B259D2679DDB200EC2A58 /* FourthChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthChildViewController.swift; sourceTree = "<group>"; };
+		383B259F2679E24B00EC2A58 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		38A9C3B52643A91F00576AA6 /* EnumeratedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumeratedView.swift; sourceTree = "<group>"; };
 		38A9C3B62643A91F00576AA6 /* Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 		38A9C3B72643A91F00576AA6 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		381955E12642FC99001A9F2A = {
 			isa = PBXGroup;
 			children = (
+				383B259F2679E24B00EC2A58 /* .gitignore */,
 				38A9C3B42643A91F00576AA6 /* SwiftCSV */,
 				383B25912679CA7800EC2A58 /* IcePack+CoreDataClass.swift */,
 				383B25922679CA7800EC2A58 /* IcePack+CoreDataProperties.swift */,
@@ -388,6 +391,7 @@
 				381955F52642FC99001A9F2A /* Main.storyboard in Resources */,
 				84849A552670D7C5000CA8BA /* .gitignore in Resources */,
 				381956272643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */,
+				383B25A02679E24B00EC2A58 /* .gitignore in Resources */,
 				383B25882679C8DB00EC2A58 /* 도봉구아이스팩.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
