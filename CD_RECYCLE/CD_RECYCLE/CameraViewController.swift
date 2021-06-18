@@ -4,6 +4,7 @@
 //
 //  Created by 강다연 on 2021/06/05.
 //
+
 import CoreML
 import UIKit
 import Photos
@@ -17,8 +18,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var itemName: UILabel!
     
     var imagePickerController = UIImagePickerController()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         /*self.imagePickerController.sourceType = .photoLibrary
         self.present(self.imagePickerController, animated: true, completion: nil)*/
         PredictionResultViewController.self
-        
     }
     
     func checkPermissions(){
@@ -62,11 +60,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             print("we don't have access to your Photos.")
         }
     }
+
     /*
     private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMadiawithInfo info: [UIImagePickerController.InfoKey : Any]){
             cameraPreview?.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         picker.dismiss(animated: true, completion: nil)
     }
-*/
+    */
 
 }
