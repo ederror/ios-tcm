@@ -6,61 +6,56 @@
 //
 
 import CoreML
+import CoreData
 import UIKit
 
 class PredictionResultViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    private let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "photo")
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
-
-    private let label: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.text = "Select Image"
-        label.numberOfLines = 0
-        return label
-    }()
-
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var recyclewayLabel: UILabel!
+    var inputimg: UIImage?
+    var resultName: String?
+    var resultRecycleWay: String?
+    var resultIdx: Int16?
+    
     override func viewDidLoad() {
+
         super.viewDidLoad()
-        view.addSubview(label)
-        view.addSubview(imageView)
-
-        let tap = UITapGestureRecognizer(
-            target: self,
-            action: #selector(didTapImage)
-        )
-        tap.numberOfTapsRequired = 1
-        imageView.isUserInteractionEnabled = true
-        imageView.addGestureRecognizer(tap)
+        
+        // 이미지 화면에 표시
+        imageView.image = inputimg
+        
+        // 예측 수행 (결과 라벨(ex. "아이스팩") -> resultName에 저장)
+        analyzeImage(image: inputimg)
+        
+        nameLabel.text = "이 물건은 \(resultName ?? "...")입니다."
+        
+        // TODO: resultName을 이용해 coreData에서 일치하는 항목 확인
+        // 해당 항목의 recycleWay property를 resultRecycleWay에 저장
+        // classId property는 resultIdx에 저장 (MapViewController로 전달)
+        let RCrequest: NSFetchRequest<Recycle> = Recycle.fetchRequest()
+        let RCfetchResult = PersistenceManager.shared.fetch(request: RCrequest)
+        
+        for item in RCfetchResult {
+            if item.name == resultName {
+                resultRecycleWay = item.recycleWay
+                resultIdx = item.classId
+                break
+            }
+        }
+        
+        // Label에 출력
+        recyclewayLabel.text = resultRecycleWay
     }
-
-    @objc func didTapImage() {
-        let picker = UIImagePickerController()
-        picker.sourceType = .photoLibrary
-        picker.delegate = self
-        present(picker, animated: true)
+    
+    // 다음 viewController(지도)로 이동할 때 호출됩니다.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! MapViewController
+        nextVC.segIdx = resultIdx
     }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        imageView.frame = CGRect(
-            x: 20,
-            y: view.safeAreaInsets.top,
-            width: view.frame.size.width-40,
-            height: view.frame.size.width-40)
-        label.frame = CGRect(
-            x: 20,
-            y: view.safeAreaInsets.top+(view.frame.size.width-40)+10,
-            width: view.frame.size.width-40,
-            height: 100
-        )
-    }
-
+    
+    // UIImage 타입의 input을 받아서, 모델에 입력값으로 넣어 예측을 수행
     private func analyzeImage(image: UIImage?) {
         guard let buffer = image?.resize(size: CGSize(width: 224, height: 224))?
                 .getCVPixelBuffer() else {
@@ -69,36 +64,16 @@ class PredictionResultViewController: UIViewController, UIImagePickerControllerD
 
         do {
             let config = MLModelConfiguration()
-            //let model = try GoogLeNetPlaces(configuration: config)
             let model = try TrashClassificationModel(configuration: config)
-            //let input = GoogLeNetPlacesInput(sceneImage: buffer)
             let input = TrashClassificationModelInput(InputImg: buffer)
             
             let output = try model.prediction(input: input)
-            let text = output.classLabel
-            print(output.classLabel)
-            print(output._674)
-            label.text = text
+
+            resultName = output.classLabel
         }
         catch {
             print(error.localizedDescription)
         }
-    }
-
-    // Image Picker
-
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        // cancelled
-        picker.dismiss(animated: true, completion: nil)
-    }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true, completion: nil)
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
-            return
-        }
-        imageView.image = image
-        analyzeImage(image: image)
     }
 }
 
