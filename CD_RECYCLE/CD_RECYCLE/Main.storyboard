@@ -50,34 +50,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWc-2H-ljl">
-                                <rect key="frame" x="149" y="728" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="내 주변 수거함 찾기"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiE-OY-YSS">
-                                <rect key="frame" x="237" y="311" width="57" height="44"/>
+                                <rect key="frame" x="232" y="421" width="57" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="photo" catalog="system"/>
                                 <connections>
                                     <action selector="tappedPhotoButton:" destination="toY-Hd-0mG" eventType="touchUpInside" id="4RW-Re-IxZ"/>
-                                    <segue destination="XVc-tn-LtU" kind="show" id="Jhm-bA-ufS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTe-aa-CPW">
-                                <rect key="frame" x="90" y="316" width="49" height="34"/>
+                                <rect key="frame" x="85" y="426" width="49" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="camera" catalog="system"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-6U-tlS">
+                                <rect key="frame" x="16" y="104" width="343" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-WJ-T0Z">
+                                <rect key="frame" x="137" y="496" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="검색 결과 확인 &gt;"/>
+                                <connections>
+                                    <segue destination="XVc-tn-LtU" kind="show" id="LX8-3n-rHL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4iP-N8-sDb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="kkD-Nf-h20"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="LTe-aa-CPW" id="J53-ON-f3h"/>
+                        <outlet property="cameraPreview" destination="mUF-6U-tlS" id="Ydr-kl-6yC"/>
+                        <outlet property="photoButton" destination="aiE-OY-YSS" id="IPQ-N1-DXl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUV-9f-bOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="36"/>
+            <point key="canvasLocation" x="1820" y="35.532233883058474"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="m6Q-Nm-Xw6">
