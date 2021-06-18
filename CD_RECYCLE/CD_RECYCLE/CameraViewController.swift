@@ -16,8 +16,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var cameraPreview: UIImageView!
     @IBOutlet weak var cameraButton: UIButton!
     
-    @IBOutlet weak var itemName: UILabel!
-    
     var imagePickerController = UIImagePickerController()
     
     var selectedImg: UIImage?
