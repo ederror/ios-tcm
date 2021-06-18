@@ -10,7 +10,6 @@ import UIKit
 class MapViewController: UIViewController {
 
     @IBOutlet var segControl: UISegmentedControl!
-    @IBOutlet var lbl: UILabel!
     @IBOutlet weak var viewContainer: UIView!
     var itemName: String?
     
@@ -92,6 +91,5 @@ class MapViewController: UIViewController {
         //label.text = itemName
         
     }
-
     
 }

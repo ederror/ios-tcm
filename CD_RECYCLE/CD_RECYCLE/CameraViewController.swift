@@ -71,6 +71,5 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             cameraPreview?.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         picker.dismiss(animated: true, completion: nil)
     }
-
-
+    
 }

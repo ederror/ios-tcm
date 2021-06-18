@@ -15,7 +15,7 @@ class SecondChildViewController: UIViewController { // 폐건전지
         super.viewDidLoad()
         
         let mapView = NMFNaverMapView(frame: CGRect(x: view.frame.origin.x, y: view.frame.origin.y,
-                                                    width: 329.0, height: 516.0))
+                                                    width: 343.0, height: 516.0))
         
         // Do any additional setup after loading the view.
         
