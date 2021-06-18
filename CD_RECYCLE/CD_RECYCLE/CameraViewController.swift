@@ -67,5 +67,4 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         picker.dismiss(animated: true, completion: nil)
     }
     */
-
 }
