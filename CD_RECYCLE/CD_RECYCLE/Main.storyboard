@@ -175,6 +175,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXi-P0-4GX">
+                                <rect key="frame" x="129" y="562" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="내 주변 수거함 찾기"/>
+                                <connections>
+                                    <segue destination="oFB-an-kKR" kind="show" id="woX-8q-uv9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m7T-GZ-S0D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -191,6 +199,9 @@
             <point key="canvasLocation" x="2533.5999999999999" y="35.532233883058474"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="woX-8q-uv9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="photo" catalog="system" width="128" height="93"/>
