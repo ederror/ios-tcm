@@ -17,7 +17,6 @@
 		381956272643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */ = {isa = PBXBuildFile; fileRef = 381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */; };
 		381956282643058D001A9F2A /* 시트 1-표 2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 381956262643058D001A9F2A /* 시트 1-표 2.csv */; };
 		383B257E2679B78C00EC2A58 /* FirstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */; };
-		383B25872679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv in Resources */ = {isa = PBXBuildFile; fileRef = 383B25852679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv */; };
 		383B25882679C8DB00EC2A58 /* 도봉구아이스팩.csv in Resources */ = {isa = PBXBuildFile; fileRef = 383B25862679C8DB00EC2A58 /* 도봉구아이스팩.csv */; };
 		383B25952679CA7800EC2A58 /* IcePack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25912679CA7800EC2A58 /* IcePack+CoreDataClass.swift */; };
 		383B25962679CA7800EC2A58 /* IcePack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25922679CA7800EC2A58 /* IcePack+CoreDataProperties.swift */; };
@@ -46,6 +45,8 @@
 		D4CC5596267C9FAA00ECD7CD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC5594267C9FAA00ECD7CD /* Extensions.swift */; };
 		D4CC5597267C9FAA00ECD7CD /* PredictionResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC5595267C9FAA00ECD7CD /* PredictionResultViewController.swift */; };
 		D4CC5599267C9FC300ECD7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4CC5598267C9FC300ECD7CD /* Main.storyboard */; };
+		D4CC559B267CA18800ECD7CD /* TrashClassificationModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D4CC559A267CA18800ECD7CD /* TrashClassificationModel.mlmodel */; };
+		D4CC559D267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv in Resources */ = {isa = PBXBuildFile; fileRef = D4CC559C267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +87,6 @@
 		381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv"; sourceTree = "<group>"; };
 		381956262643058D001A9F2A /* 시트 1-표 2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "시트 1-표 2.csv"; sourceTree = "<group>"; };
 		383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstChildViewController.swift; sourceTree = "<group>"; };
-		383B25852679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "도봉구가로쓰레기통.csv"; path = "../../../../../../data/도봉구가로쓰레기통.csv"; sourceTree = "<group>"; };
 		383B25862679C8DB00EC2A58 /* 도봉구아이스팩.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "도봉구아이스팩.csv"; sourceTree = "<group>"; };
 		383B25912679CA7800EC2A58 /* IcePack+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IcePack+CoreDataClass.swift"; path = "CD_RECYCLE/IcePack+CoreDataClass.swift"; sourceTree = "<group>"; };
 		383B25922679CA7800EC2A58 /* IcePack+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IcePack+CoreDataProperties.swift"; path = "CD_RECYCLE/IcePack+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -122,6 +122,8 @@
 		D4CC5594267C9FAA00ECD7CD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D4CC5595267C9FAA00ECD7CD /* PredictionResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionResultViewController.swift; sourceTree = "<group>"; };
 		D4CC5598267C9FC300ECD7CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D4CC559A267CA18800ECD7CD /* TrashClassificationModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TrashClassificationModel.mlmodel; sourceTree = SOURCE_ROOT; };
+		D4CC559C267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "도봉구가로쓰레기통.csv"; sourceTree = "<group>"; };
 		FE6F5598DDA3BC5BF20E6039 /* Pods_CD_RECYCLETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CD_RECYCLETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 		381955EC2642FC99001A9F2A /* CD_RECYCLE */ = {
 			isa = PBXGroup;
 			children = (
+				D4CC559A267CA18800ECD7CD /* TrashClassificationModel.mlmodel */,
 				D4CC5598267C9FC300ECD7CD /* Main.storyboard */,
 				D4CC5594267C9FAA00ECD7CD /* Extensions.swift */,
 				D4CC5595267C9FAA00ECD7CD /* PredictionResultViewController.swift */,
@@ -212,7 +215,7 @@
 		381956242643058D001A9F2A /* data */ = {
 			isa = PBXGroup;
 			children = (
-				383B25852679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv */,
+				D4CC559C267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv */,
 				383B25862679C8DB00EC2A58 /* 도봉구아이스팩.csv */,
 				381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */,
 				381956262643058D001A9F2A /* 시트 1-표 2.csv */,
@@ -388,8 +391,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CC559D267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv in Resources */,
 				D4CC5599267C9FC300ECD7CD /* Main.storyboard in Resources */,
-				383B25872679C8DB00EC2A58 /* 도봉구가로쓰레기통.csv in Resources */,
 				381955FD2642FC9A001A9F2A /* LaunchScreen.storyboard in Resources */,
 				381956282643058D001A9F2A /* 시트 1-표 2.csv in Resources */,
 				381956272643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */,
@@ -550,6 +553,7 @@
 				84849A532670AF57000CA8BA /* MapViewController.swift in Sources */,
 				D4CC5597267C9FAA00ECD7CD /* PredictionResultViewController.swift in Sources */,
 				383B259C2679D1B400EC2A58 /* ThirdChildViewController.swift in Sources */,
+				D4CC559B267CA18800ECD7CD /* TrashClassificationModel.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
