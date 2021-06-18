@@ -12,6 +12,7 @@ class MapViewController: UIViewController {
     @IBOutlet var segControl: UISegmentedControl!
     @IBOutlet weak var viewContainer: UIView!
     var itemName: String?
+    var segIdx: Int16?
     
     /*
      예시로 만든 두 개의 ViewController입니다.
@@ -46,9 +47,20 @@ class MapViewController: UIViewController {
          구현할 수 있을 것 같습니다.
          */
         
-        segControl.selectedSegmentIndex = 1
+        segControl.selectedSegmentIndex = Int(segIdx ?? 0)
         
-        viewContainer.bringSubviewToFront(secondVC.view)
+        if segControl.selectedSegmentIndex == 0 {
+            viewContainer.bringSubviewToFront(firstVC.view)
+        }
+        else if segControl.selectedSegmentIndex == 1{
+            viewContainer.bringSubviewToFront(secondVC.view)
+        }
+        else if segControl.selectedSegmentIndex == 2 {
+            viewContainer.bringSubviewToFront(thirdVC.view)
+        }
+        else if segControl.selectedSegmentIndex == 3 {
+            viewContainer.bringSubviewToFront(fourthVC.view)
+        }
     }
     
     // segControl에서 선택된 항목이 변경되면 호출되는 함수입니다.
@@ -85,11 +97,6 @@ class MapViewController: UIViewController {
          각 항목을 선택했을 때 그에 맞는 지도가 나타나는 건
          위와 같이 조건문으로도 구현할 수 있을 것 같습니다.
          */
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        //label.text = itemName
-        
     }
     
 }
