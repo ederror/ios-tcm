@@ -21,6 +21,7 @@ class PredictionResultViewController: UIViewController, UIImagePickerControllerD
     var resultName: String?
     var resultRecycleWay: String?
     var resultIdx: Int16?
+    typealias completionHandler = (Any?) -> Void
     
     override func viewDidLoad() {
 
@@ -28,31 +29,16 @@ class PredictionResultViewController: UIViewController, UIImagePickerControllerD
         
         // 이미지 화면에 표시
         imageView.image = inputimg
+        nameLabel.text = "이 물건은 \(resultName ?? "...")입니다."
         
         // 예측 수행 (결과 라벨(ex. "아이스팩") -> resultName에 저장)
-        let imgData = inputimg!.jpegData(compressionQuality: 1)!
         let url = "http://192.168.0.2:3654/upload"
-        
-        AF.upload(multipartFormData: { (multipartFormData) in
-            multipartFormData.append(imgData, withName: "inputimg", fileName: "test.jpg", mimeType: "image/jpg")
-        }, to: url)
-        .responseJSON { response in
-            switch response.result {
-            case .success(let res):
-                print(response)
-                let jsonObj = res as? [String: AnyObject]
-                print(jsonObj!)
-                //self.resultName = jsonObj!["tname"] as? String
-                self.resultName = "Hi"
-                print(self.resultName!)
-            case .failure(_):
-                print("fail")
-            }
-                
+        postImage(url: url, inputimg: inputimg!, handler: { nsdic in
             
-        }
+            self.resultName = nsdic["tname"] as? String
+            self.nameLabel.text = "이 물건은 \(self.resultName ?? "...")입니다."
+        })
         
-        nameLabel.text = "이 물건은 \(resultName ?? "...")입니다."
         
         // TODO: resultName을 이용해 coreData에서 일치하는 항목 확인
         // 해당 항목의 recycleWay property를 resultRecycleWay에 저장
@@ -78,5 +64,24 @@ class PredictionResultViewController: UIViewController, UIImagePickerControllerD
         nextVC.segIdx = resultIdx
     }
     
+    func postImage(url: String, inputimg: UIImage, handler: @escaping (NSDictionary) -> Void) {
+        let imgData = inputimg.jpegData(compressionQuality: 1)!
+      
+        AF.upload(multipartFormData: { (multipartFormData) in
+            multipartFormData.append(imgData, withName: "inputimg", fileName: "test.jpg", mimeType: "image/jpg")
+        }, to: url)
+        .responseJSON { response in
+            switch response.result {
+            case .success(let res):
+                print(response)
+                let jsonObj = res as? NSDictionary
+                print(jsonObj!)
+                handler(jsonObj!)
+                
+            case .failure(_):
+                print("fail")
+            }
+        }
+    }
 }
 
