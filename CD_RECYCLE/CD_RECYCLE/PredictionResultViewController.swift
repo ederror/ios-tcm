@@ -8,6 +8,9 @@
 import CoreML
 import CoreData
 import UIKit
+import Alamofire
+
+let encoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(0x0422))
 
 class PredictionResultViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -27,7 +30,27 @@ class PredictionResultViewController: UIViewController, UIImagePickerControllerD
         imageView.image = inputimg
         
         // 예측 수행 (결과 라벨(ex. "아이스팩") -> resultName에 저장)
-        analyzeImage(image: inputimg)
+        let imgData = inputimg!.jpegData(compressionQuality: 1)!
+        let url = "http://192.168.0.2:3654/upload"
+        
+        AF.upload(multipartFormData: { (multipartFormData) in
+            multipartFormData.append(imgData, withName: "inputimg", fileName: "test.jpg", mimeType: "image/jpg")
+        }, to: url)
+        .responseJSON { response in
+            switch response.result {
+            case .success(let res):
+                print(response)
+                let jsonObj = res as? [String: AnyObject]
+                print(jsonObj!)
+                //self.resultName = jsonObj!["tname"] as? String
+                self.resultName = "Hi"
+                print(self.resultName!)
+            case .failure(_):
+                print("fail")
+            }
+                
+            
+        }
         
         nameLabel.text = "이 물건은 \(resultName ?? "...")입니다."
         
@@ -55,25 +78,5 @@ class PredictionResultViewController: UIViewController, UIImagePickerControllerD
         nextVC.segIdx = resultIdx
     }
     
-    // UIImage 타입의 input을 받아서, 모델에 입력값으로 넣어 예측을 수행
-    private func analyzeImage(image: UIImage?) {
-        guard let buffer = image?.resize(size: CGSize(width: 224, height: 224))?
-                .getCVPixelBuffer() else {
-            return
-        }
-
-        do {
-            let config = MLModelConfiguration()
-            let model = try TrashClassificationModel(configuration: config)
-            let input = TrashClassificationModelInput(InputImg: buffer)
-            
-            let output = try model.prediction(input: input)
-
-            resultName = output.classLabel
-        }
-        catch {
-            print(error.localizedDescription)
-        }
-    }
 }
 
