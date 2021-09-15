@@ -5,12 +5,8 @@
 //  Created by 황선애 on 2021/06/18.
 //
 
-import CoreML
-import CoreData
 import UIKit
 import Alamofire
-
-let encoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(0x0422))
 
 class PredictionResultViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -21,7 +17,6 @@ class PredictionResultViewController: UIViewController, UIImagePickerControllerD
     var resultName: String?
     var resultRecycleWay: String?
     var resultIdx: Int16?
-    typealias completionHandler = (Any?) -> Void
     
     override func viewDidLoad() {
 
@@ -31,31 +26,16 @@ class PredictionResultViewController: UIViewController, UIImagePickerControllerD
         imageView.image = inputimg
         nameLabel.text = "이 물건은 \(resultName ?? "...")입니다."
         
-        // 예측 수행 (결과 라벨(ex. "아이스팩") -> resultName에 저장)
+        // REST Api 호출해서 예측 결과 받아오기
         let url = "http://192.168.0.2:3654/upload"
         postImage(url: url, inputimg: inputimg!, handler: { nsdic in
             
             self.resultName = nsdic["tname"] as? String
             self.nameLabel.text = "이 물건은 \(self.resultName ?? "...")입니다."
+            self.recyclewayLabel.text = nsdic["thowto"] as? String
+            self.resultIdx = nsdic["thowtoid"] as? Int16
         })
         
-        
-        // TODO: resultName을 이용해 coreData에서 일치하는 항목 확인
-        // 해당 항목의 recycleWay property를 resultRecycleWay에 저장
-        // classId property는 resultIdx에 저장 (MapViewController로 전달)
-        let RCrequest: NSFetchRequest<Recycle> = Recycle.fetchRequest()
-        let RCfetchResult = PersistenceManager.shared.fetch(request: RCrequest)
-        
-        for item in RCfetchResult {
-            if item.name == resultName {
-                resultRecycleWay = item.recycleWay
-                resultIdx = item.classId
-                break
-            }
-        }
-        
-        // Label에 출력
-        recyclewayLabel.text = resultRecycleWay
     }
     
     // 다음 viewController(지도)로 이동할 때 호출됩니다.
