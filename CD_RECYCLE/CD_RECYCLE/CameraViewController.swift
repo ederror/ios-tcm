@@ -5,7 +5,6 @@
 //  Created by 강다연 on 2021/06/05.
 //
 
-import CoreML
 import UIKit
 import Photos
 
@@ -22,7 +21,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Camera"
         imagePickerController.delegate = self
         checkPermissions()
         

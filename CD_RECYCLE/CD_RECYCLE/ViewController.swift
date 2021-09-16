@@ -6,20 +6,11 @@
 //
 
 import UIKit
-import CoreData
-import SwiftCSV
 
-
-class ViewController: UIViewController{//}, UITableViewDelegate, UITableViewDataSource {
-    var container: NSPersistentContainer!
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    let dataManager = DataManager()
+class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataManager.dataLoad()
         
     }
 }

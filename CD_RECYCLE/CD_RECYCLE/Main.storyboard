@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,20 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork.png" translatesAutoresizingMaskIntoConstraints="NO" id="q0J-2V-Jfr">
-                                <rect key="frame" x="67" y="196" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="q0J-2V-Jfr" secondAttribute="height" multiplier="15:8" id="7Jb-LJ-wO9"/>
-                                    <constraint firstAttribute="height" constant="128" id="eBd-67-x9G"/>
-                                    <constraint firstAttribute="width" constant="240" id="kV9-Yr-23Z"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="CQw-3p-6LG">
-                                <rect key="frame" x="90" y="390" width="195" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="CQw-3p-6LG">
+                                <rect key="frame" x="90" y="318" width="195" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3w-pv-4Ds">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="사물 검색">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,21 +42,19 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bfI-V4-LNI"/>
-                                    <constraint firstAttribute="width" constant="195" id="rRy-D6-NLy"/>
+                                    <constraint firstAttribute="height" constant="30" id="31O-Dm-FTr"/>
+                                    <constraint firstAttribute="width" constant="195" id="Weg-0k-CzF"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q0J-2V-Jfr" secondAttribute="trailing" constant="68" id="6zk-kT-7M2"/>
-                            <constraint firstItem="CQw-3p-6LG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="70e-JL-dyV"/>
-                            <constraint firstItem="q0J-2V-Jfr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="DYv-5f-Vuo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CQw-3p-6LG" secondAttribute="bottom" constant="247" id="Ij6-Mm-3Qu"/>
-                            <constraint firstItem="q0J-2V-Jfr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="O6S-dy-Xkh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CQw-3p-6LG" secondAttribute="trailing" constant="90" id="aox-Ha-PxZ"/>
-                            <constraint firstItem="CQw-3p-6LG" firstAttribute="top" secondItem="q0J-2V-Jfr" secondAttribute="bottom" constant="66" id="zex-sT-jQd"/>
+                            <constraint firstItem="CQw-3p-6LG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="Dmh-z5-xZV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CQw-3p-6LG" secondAttribute="trailing" constant="90" id="Nzh-ig-LlQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CQw-3p-6LG" secondAttribute="bottom" constant="265" id="eBl-Ff-tJ0"/>
+                            <constraint firstItem="CQw-3p-6LG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="276" id="el3-aE-dcP"/>
+                            <constraint firstItem="CQw-3p-6LG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qjh-hA-MLk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="lKL-JD-DOQ"/>
@@ -84,7 +74,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiE-OY-YSS">
                                 <rect key="frame" x="232" y="421" width="57" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="photo" catalog="system"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="photo" catalog="system" symbolScale="large"/>
+                                </state>
                                 <connections>
                                     <action selector="tappedPhotoButton:" destination="toY-Hd-0mG" eventType="touchUpInside" id="4RW-Re-IxZ"/>
                                 </connections>
@@ -92,7 +86,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTe-aa-CPW">
                                 <rect key="frame" x="85" y="426" width="49" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="camera" catalog="system"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="camera" catalog="system" symbolScale="large"/>
+                                </state>
                                 <connections>
                                     <action selector="tappedCameraButton:" destination="toY-Hd-0mG" eventType="touchUpInside" id="2By-6d-nVU"/>
                                 </connections>
@@ -105,7 +103,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-WJ-T0Z">
                                 <rect key="frame" x="137" y="496" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="검색 결과 확인 &gt;"/>
+                                <state key="normal" title="검색 결과 확인 &gt;">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="XVc-tn-LtU" kind="show" id="LX8-3n-rHL"/>
                                 </connections>
@@ -233,7 +233,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b58-ko-yQ8">
-                                <rect key="frame" x="16" y="96" width="343" height="289"/>
+                                <rect key="frame" x="16" y="108" width="343" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -253,11 +253,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="osU-TV-Uh9"/>
+        <segue reference="woX-8q-uv9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
-        <image name="iTunesArtwork.png" width="512" height="512"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -12,31 +12,12 @@
 		381955F22642FC99001A9F2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381955F12642FC99001A9F2A /* ViewController.swift */; };
 		381955F82642FC99001A9F2A /* CD_RECYCLE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 381955F62642FC99001A9F2A /* CD_RECYCLE.xcdatamodeld */; };
 		381955FD2642FC9A001A9F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381955FB2642FC9A001A9F2A /* LaunchScreen.storyboard */; };
-		381956222642FEB0001A9F2A /* Recycle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381956202642FEB0001A9F2A /* Recycle+CoreDataClass.swift */; };
-		381956232642FEB0001A9F2A /* Recycle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381956212642FEB0001A9F2A /* Recycle+CoreDataProperties.swift */; };
-		381956272643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */ = {isa = PBXBuildFile; fileRef = 381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */; };
-		381956282643058D001A9F2A /* 시트 1-표 2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 381956262643058D001A9F2A /* 시트 1-표 2.csv */; };
 		383B257E2679B78C00EC2A58 /* FirstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */; };
-		383B25882679C8DB00EC2A58 /* 도봉구아이스팩.csv in Resources */ = {isa = PBXBuildFile; fileRef = 383B25862679C8DB00EC2A58 /* 도봉구아이스팩.csv */; };
-		383B25952679CA7800EC2A58 /* IcePack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25912679CA7800EC2A58 /* IcePack+CoreDataClass.swift */; };
-		383B25962679CA7800EC2A58 /* IcePack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25922679CA7800EC2A58 /* IcePack+CoreDataProperties.swift */; };
-		383B25972679CA7800EC2A58 /* TrashCan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25932679CA7800EC2A58 /* TrashCan+CoreDataClass.swift */; };
-		383B25982679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25942679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift */; };
 		383B259A2679D1A600EC2A58 /* SecondChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B25992679D1A600EC2A58 /* SecondChildViewController.swift */; };
 		383B259C2679D1B400EC2A58 /* ThirdChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B259B2679D1B400EC2A58 /* ThirdChildViewController.swift */; };
 		383B259E2679DDB200EC2A58 /* FourthChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383B259D2679DDB200EC2A58 /* FourthChildViewController.swift */; };
 		383B25A02679E24B00EC2A58 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 383B259F2679E24B00EC2A58 /* .gitignore */; };
-		38A9C3E32643A91F00576AA6 /* EnumeratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B52643A91F00576AA6 /* EnumeratedView.swift */; };
-		38A9C3E42643A91F00576AA6 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B62643A91F00576AA6 /* Description.swift */; };
-		38A9C3E52643A91F00576AA6 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B72643A91F00576AA6 /* CSV.swift */; };
-		38A9C3E62643A91F00576AA6 /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B82643A91F00576AA6 /* String+Lines.swift */; };
-		38A9C3E72643A91F00576AA6 /* NamedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3B92643A91F00576AA6 /* NamedView.swift */; };
-		38A9C3E82643A91F00576AA6 /* ParsingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3BA2643A91F00576AA6 /* ParsingState.swift */; };
-		38A9C3E92643A91F00576AA6 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3BB2643A91F00576AA6 /* Parser.swift */; };
 		38A9C3FA2643B00300576AA6 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 38A9C3F92643B00300576AA6 /* SwiftCSV */; };
-		38A9C3FD2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */; };
-		38A9C3FE2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */; };
-		38D927182679E45B005CD555 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D927172679E45B005CD555 /* DataManager.swift */; };
 		6F2CD16580FF2C0A383DA0EC /* Pods_CD_RECYCLETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6F5598DDA3BC5BF20E6039 /* Pods_CD_RECYCLETests.framework */; };
 		7149BF4ADF1A7BE1F002243D /* Pods_CD_RECYCLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F3CF017DF3179868658621 /* Pods_CD_RECYCLE.framework */; };
 		84849A512670A040000CA8BA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84849A502670A040000CA8BA /* CameraViewController.swift */; };
@@ -44,10 +25,10 @@
 		9F47F15FEEC14227733916B7 /* Pods_CD_RECYCLE_CD_RECYCLEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C065F09138F460FC60B00 /* Pods_CD_RECYCLE_CD_RECYCLEUITests.framework */; };
 		D4ACA24B26F20C990009B604 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4ACA24A26F20C990009B604 /* iTunesArtwork@3x.png */; };
 		D4ACA24D26F20ED30009B604 /* launchscreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ACA24C26F20ED30009B604 /* launchscreen.jpg */; };
-		D4CC5596267C9FAA00ECD7CD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC5594267C9FAA00ECD7CD /* Extensions.swift */; };
+		D4ACA25026F2AFD30009B604 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D4ACA24E26F2AFD30009B604 /* logo.png */; };
+		D4ACA25126F2AFD30009B604 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ACA24F26F2AFD30009B604 /* bg.jpg */; };
 		D4CC5597267C9FAA00ECD7CD /* PredictionResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC5595267C9FAA00ECD7CD /* PredictionResultViewController.swift */; };
 		D4CC5599267C9FC300ECD7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4CC5598267C9FC300ECD7CD /* Main.storyboard */; };
-		D4CC559D267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv in Resources */ = {isa = PBXBuildFile; fileRef = D4CC559C267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,49 +64,22 @@
 		381955FE2642FC9A001A9F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		381956032642FC9B001A9F2A /* CD_RECYCLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CD_RECYCLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3819560E2642FC9B001A9F2A /* CD_RECYCLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CD_RECYCLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		381956202642FEB0001A9F2A /* Recycle+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recycle+CoreDataClass.swift"; sourceTree = "<group>"; };
-		381956212642FEB0001A9F2A /* Recycle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recycle+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv"; sourceTree = "<group>"; };
-		381956262643058D001A9F2A /* 시트 1-표 2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "시트 1-표 2.csv"; sourceTree = "<group>"; };
 		383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstChildViewController.swift; sourceTree = "<group>"; };
-		383B25862679C8DB00EC2A58 /* 도봉구아이스팩.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "도봉구아이스팩.csv"; sourceTree = "<group>"; };
-		383B25912679CA7800EC2A58 /* IcePack+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IcePack+CoreDataClass.swift"; path = "CD_RECYCLE/IcePack+CoreDataClass.swift"; sourceTree = "<group>"; };
-		383B25922679CA7800EC2A58 /* IcePack+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IcePack+CoreDataProperties.swift"; path = "CD_RECYCLE/IcePack+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		383B25932679CA7800EC2A58 /* TrashCan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrashCan+CoreDataClass.swift"; path = "CD_RECYCLE/TrashCan+CoreDataClass.swift"; sourceTree = "<group>"; };
-		383B25942679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TrashCan+CoreDataProperties.swift"; path = "CD_RECYCLE/TrashCan+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		383B25992679D1A600EC2A58 /* SecondChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChildViewController.swift; sourceTree = "<group>"; };
 		383B259B2679D1B400EC2A58 /* ThirdChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdChildViewController.swift; sourceTree = "<group>"; };
 		383B259D2679DDB200EC2A58 /* FourthChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthChildViewController.swift; sourceTree = "<group>"; };
 		383B259F2679E24B00EC2A58 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		38A9C3B52643A91F00576AA6 /* EnumeratedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumeratedView.swift; sourceTree = "<group>"; };
-		38A9C3B62643A91F00576AA6 /* Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
-		38A9C3B72643A91F00576AA6 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
-		38A9C3B82643A91F00576AA6 /* String+Lines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Lines.swift"; sourceTree = "<group>"; };
-		38A9C3B92643A91F00576AA6 /* NamedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedView.swift; sourceTree = "<group>"; };
-		38A9C3BA2643A91F00576AA6 /* ParsingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsingState.swift; sourceTree = "<group>"; };
-		38A9C3BB2643A91F00576AA6 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		38A9C3F12643AF6D00576AA6 /* EnumeratedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumeratedView.swift; sourceTree = "<group>"; };
-		38A9C3F22643AF6D00576AA6 /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
-		38A9C3F32643AF6D00576AA6 /* CSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
-		38A9C3F42643AF6D00576AA6 /* String+Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Lines.swift"; sourceTree = "<group>"; };
-		38A9C3F52643AF6D00576AA6 /* NamedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedView.swift; sourceTree = "<group>"; };
-		38A9C3F62643AF6D00576AA6 /* ParsingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingState.swift; sourceTree = "<group>"; };
-		38A9C3F72643AF6D00576AA6 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightAndBattery+CoreDataClass.swift"; sourceTree = "<group>"; };
-		38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightAndBattery+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		38D927172679E45B005CD555 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		84849A502670A040000CA8BA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		84849A522670AF57000CA8BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		84849A542670D7C5000CA8BA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9AC8B6D0F5994C381318530C /* Pods-CD_RECYCLE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CD_RECYCLE.release.xcconfig"; path = "Target Support Files/Pods-CD_RECYCLE/Pods-CD_RECYCLE.release.xcconfig"; sourceTree = "<group>"; };
 		9FF0D2DCC1B733456348E690 /* Pods-CD_RECYCLE-CD_RECYCLEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CD_RECYCLE-CD_RECYCLEUITests.debug.xcconfig"; path = "Target Support Files/Pods-CD_RECYCLE-CD_RECYCLEUITests/Pods-CD_RECYCLE-CD_RECYCLEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1F3CF017DF3179868658621 /* Pods_CD_RECYCLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CD_RECYCLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ACA24A26F20C990009B604 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
 		D4ACA24C26F20ED30009B604 /* launchscreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchscreen.jpg; sourceTree = "<group>"; };
-		D4CC5594267C9FAA00ECD7CD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D4ACA24E26F2AFD30009B604 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D4ACA24F26F2AFD30009B604 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		D4CC5595267C9FAA00ECD7CD /* PredictionResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionResultViewController.swift; sourceTree = "<group>"; };
 		D4CC5598267C9FC300ECD7CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		D4CC559C267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "도봉구가로쓰레기통.csv"; sourceTree = "<group>"; };
 		FE6F5598DDA3BC5BF20E6039 /* Pods_CD_RECYCLETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CD_RECYCLETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -162,15 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				383B259F2679E24B00EC2A58 /* .gitignore */,
-				38A9C3B42643A91F00576AA6 /* SwiftCSV */,
-				383B25912679CA7800EC2A58 /* IcePack+CoreDataClass.swift */,
-				383B25922679CA7800EC2A58 /* IcePack+CoreDataProperties.swift */,
-				383B25932679CA7800EC2A58 /* TrashCan+CoreDataClass.swift */,
-				383B25942679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift */,
-				38A9C3FB2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift */,
-				38A9C3FC2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift */,
-				381956202642FEB0001A9F2A /* Recycle+CoreDataClass.swift */,
-				381956212642FEB0001A9F2A /* Recycle+CoreDataProperties.swift */,
 				381955EC2642FC99001A9F2A /* CD_RECYCLE */,
 				381955EB2642FC99001A9F2A /* Products */,
 				38A9C3EF2643AF6D00576AA6 /* Frameworks */,
@@ -192,12 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				D4CC5598267C9FC300ECD7CD /* Main.storyboard */,
-				D4CC5594267C9FAA00ECD7CD /* Extensions.swift */,
 				D4CC5595267C9FAA00ECD7CD /* PredictionResultViewController.swift */,
 				381955ED2642FC99001A9F2A /* AppDelegate.swift */,
 				381955EF2642FC99001A9F2A /* SceneDelegate.swift */,
 				381955F12642FC99001A9F2A /* ViewController.swift */,
-				38D927172679E45B005CD555 /* DataManager.swift */,
 				84849A502670A040000CA8BA /* CameraViewController.swift */,
 				84849A522670AF57000CA8BA /* MapViewController.swift */,
 				383B257C2679B78C00EC2A58 /* FirstChildViewController.swift */,
@@ -216,54 +159,22 @@
 		381956242643058D001A9F2A /* data */ = {
 			isa = PBXGroup;
 			children = (
+				D4ACA24F26F2AFD30009B604 /* bg.jpg */,
+				D4ACA24E26F2AFD30009B604 /* logo.png */,
 				D4ACA24C26F20ED30009B604 /* launchscreen.jpg */,
 				D4ACA24A26F20C990009B604 /* iTunesArtwork@3x.png */,
-				D4CC559C267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv */,
-				383B25862679C8DB00EC2A58 /* 도봉구아이스팩.csv */,
-				381956252643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv */,
-				381956262643058D001A9F2A /* 시트 1-표 2.csv */,
 			);
 			path = data;
 			sourceTree = SOURCE_ROOT;
 		};
-		38A9C3B42643A91F00576AA6 /* SwiftCSV */ = {
-			isa = PBXGroup;
-			children = (
-				84849A542670D7C5000CA8BA /* .gitignore */,
-				38A9C3B52643A91F00576AA6 /* EnumeratedView.swift */,
-				38A9C3B62643A91F00576AA6 /* Description.swift */,
-				38A9C3B72643A91F00576AA6 /* CSV.swift */,
-				38A9C3B82643A91F00576AA6 /* String+Lines.swift */,
-				38A9C3B92643A91F00576AA6 /* NamedView.swift */,
-				38A9C3BA2643A91F00576AA6 /* ParsingState.swift */,
-				38A9C3BB2643A91F00576AA6 /* Parser.swift */,
-			);
-			path = SwiftCSV;
-			sourceTree = "<group>";
-		};
 		38A9C3EF2643AF6D00576AA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38A9C3F02643AF6D00576AA6 /* SwiftCSV */,
 				C1F3CF017DF3179868658621 /* Pods_CD_RECYCLE.framework */,
 				168C065F09138F460FC60B00 /* Pods_CD_RECYCLE_CD_RECYCLEUITests.framework */,
 				FE6F5598DDA3BC5BF20E6039 /* Pods_CD_RECYCLETests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		38A9C3F02643AF6D00576AA6 /* SwiftCSV */ = {
-			isa = PBXGroup;
-			children = (
-				38A9C3F12643AF6D00576AA6 /* EnumeratedView.swift */,
-				38A9C3F22643AF6D00576AA6 /* Description.swift */,
-				38A9C3F32643AF6D00576AA6 /* CSV.swift */,
-				38A9C3F42643AF6D00576AA6 /* String+Lines.swift */,
-				38A9C3F52643AF6D00576AA6 /* NamedView.swift */,
-				38A9C3F62643AF6D00576AA6 /* ParsingState.swift */,
-				38A9C3F72643AF6D00576AA6 /* Parser.swift */,
-			);
-			path = SwiftCSV;
 			sourceTree = "<group>";
 		};
 		3C564165A3002154CB9DABF7 /* Pods */ = {
@@ -394,15 +305,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4CC559D267CA1BD00ECD7CD /* 도봉구가로쓰레기통.csv in Resources */,
 				D4CC5599267C9FC300ECD7CD /* Main.storyboard in Resources */,
 				381955FD2642FC9A001A9F2A /* LaunchScreen.storyboard in Resources */,
-				381956282643058D001A9F2A /* 시트 1-표 2.csv in Resources */,
 				D4ACA24D26F20ED30009B604 /* launchscreen.jpg in Resources */,
 				D4ACA24B26F20C990009B604 /* iTunesArtwork@3x.png in Resources */,
-				381956272643058D001A9F2A /* _서울특별시 14개 구 폐형광등폐건전지 분리수거함 위치.csv in Resources */,
+				D4ACA25026F2AFD30009B604 /* logo.png in Resources */,
 				383B25A02679E24B00EC2A58 /* .gitignore in Resources */,
-				383B25882679C8DB00EC2A58 /* 도봉구아이스팩.csv in Resources */,
+				D4ACA25126F2AFD30009B604 /* bg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,31 +439,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				383B25972679CA7800EC2A58 /* TrashCan+CoreDataClass.swift in Sources */,
-				D4CC5596267C9FAA00ECD7CD /* Extensions.swift in Sources */,
-				383B25982679CA7800EC2A58 /* TrashCan+CoreDataProperties.swift in Sources */,
-				38A9C3E52643A91F00576AA6 /* CSV.swift in Sources */,
 				383B259A2679D1A600EC2A58 /* SecondChildViewController.swift in Sources */,
 				381955F82642FC99001A9F2A /* CD_RECYCLE.xcdatamodeld in Sources */,
-				38A9C3FD2643DB8F00576AA6 /* LightAndBattery+CoreDataClass.swift in Sources */,
 				381955F22642FC99001A9F2A /* ViewController.swift in Sources */,
-				381956222642FEB0001A9F2A /* Recycle+CoreDataClass.swift in Sources */,
 				381955EE2642FC99001A9F2A /* AppDelegate.swift in Sources */,
-				381956232642FEB0001A9F2A /* Recycle+CoreDataProperties.swift in Sources */,
 				381955F02642FC99001A9F2A /* SceneDelegate.swift in Sources */,
-				38D927182679E45B005CD555 /* DataManager.swift in Sources */,
 				383B259E2679DDB200EC2A58 /* FourthChildViewController.swift in Sources */,
 				383B257E2679B78C00EC2A58 /* FirstChildViewController.swift in Sources */,
-				38A9C3E32643A91F00576AA6 /* EnumeratedView.swift in Sources */,
-				383B25962679CA7800EC2A58 /* IcePack+CoreDataProperties.swift in Sources */,
-				38A9C3E82643A91F00576AA6 /* ParsingState.swift in Sources */,
-				383B25952679CA7800EC2A58 /* IcePack+CoreDataClass.swift in Sources */,
-				38A9C3E92643A91F00576AA6 /* Parser.swift in Sources */,
-				38A9C3E72643A91F00576AA6 /* NamedView.swift in Sources */,
-				38A9C3FE2643DB8F00576AA6 /* LightAndBattery+CoreDataProperties.swift in Sources */,
 				84849A512670A040000CA8BA /* CameraViewController.swift in Sources */,
-				38A9C3E62643A91F00576AA6 /* String+Lines.swift in Sources */,
-				38A9C3E42643A91F00576AA6 /* Description.swift in Sources */,
 				84849A532670AF57000CA8BA /* MapViewController.swift in Sources */,
 				D4CC5597267C9FAA00ECD7CD /* PredictionResultViewController.swift in Sources */,
 				383B259C2679D1B400EC2A58 /* ThirdChildViewController.swift in Sources */,
