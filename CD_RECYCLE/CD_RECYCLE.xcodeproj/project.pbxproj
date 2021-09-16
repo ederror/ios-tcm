@@ -23,6 +23,7 @@
 		84849A512670A040000CA8BA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84849A502670A040000CA8BA /* CameraViewController.swift */; };
 		84849A532670AF57000CA8BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84849A522670AF57000CA8BA /* MapViewController.swift */; };
 		9F47F15FEEC14227733916B7 /* Pods_CD_RECYCLE_CD_RECYCLEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C065F09138F460FC60B00 /* Pods_CD_RECYCLE_CD_RECYCLEUITests.framework */; };
+		D430E14E26F4015E0058229E /* btn1.png in Resources */ = {isa = PBXBuildFile; fileRef = D430E14D26F4015D0058229E /* btn1.png */; };
 		D4ACA24B26F20C990009B604 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4ACA24A26F20C990009B604 /* iTunesArtwork@3x.png */; };
 		D4ACA24D26F20ED30009B604 /* launchscreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4ACA24C26F20ED30009B604 /* launchscreen.jpg */; };
 		D4ACA25026F2AFD30009B604 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D4ACA24E26F2AFD30009B604 /* logo.png */; };
@@ -74,6 +75,7 @@
 		9AC8B6D0F5994C381318530C /* Pods-CD_RECYCLE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CD_RECYCLE.release.xcconfig"; path = "Target Support Files/Pods-CD_RECYCLE/Pods-CD_RECYCLE.release.xcconfig"; sourceTree = "<group>"; };
 		9FF0D2DCC1B733456348E690 /* Pods-CD_RECYCLE-CD_RECYCLEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CD_RECYCLE-CD_RECYCLEUITests.debug.xcconfig"; path = "Target Support Files/Pods-CD_RECYCLE-CD_RECYCLEUITests/Pods-CD_RECYCLE-CD_RECYCLEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1F3CF017DF3179868658621 /* Pods_CD_RECYCLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CD_RECYCLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D430E14D26F4015D0058229E /* btn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn1.png; sourceTree = "<group>"; };
 		D4ACA24A26F20C990009B604 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
 		D4ACA24C26F20ED30009B604 /* launchscreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchscreen.jpg; sourceTree = "<group>"; };
 		D4ACA24E26F2AFD30009B604 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		381956242643058D001A9F2A /* data */ = {
 			isa = PBXGroup;
 			children = (
+				D430E14D26F4015D0058229E /* btn1.png */,
 				D4ACA24F26F2AFD30009B604 /* bg.jpg */,
 				D4ACA24E26F2AFD30009B604 /* logo.png */,
 				D4ACA24C26F20ED30009B604 /* launchscreen.jpg */,
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D430E14E26F4015E0058229E /* btn1.png in Resources */,
 				D4CC5599267C9FC300ECD7CD /* Main.storyboard in Resources */,
 				381955FD2642FC9A001A9F2A /* LaunchScreen.storyboard in Resources */,
 				D4ACA24D26F20ED30009B604 /* launchscreen.jpg in Resources */,
