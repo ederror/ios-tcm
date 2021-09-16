@@ -7,7 +7,7 @@
 
 import UIKit
 import NMapsMap
-import CoreData
+import Alamofire
 
 class FourthChildViewController: UIViewController {
 
@@ -28,11 +28,43 @@ class FourthChildViewController: UIViewController {
         let CU = NMFCameraUpdate(scrollTo: LO.location)
         mapView.mapView.moveCamera(CU)
         
-        let targets = self.getNearIP(current: LO.location)
-        let coords = targets.0
-        let addrs = targets.1["주소"]!
+        let lat_left = LO.location.lat - 0.005
+        let lat_right = LO.location.lat + 0.005
+        let lng_top = LO.location.lng + 0.006
+        let lng_bot = LO.location.lng - 0.006
+        let url = "http://192.168.0.2:3654/can"
         
-        var n = 0
+        var targets: [NMGLatLng] = []
+        var addrs: [String] = []
+        
+        getCoords(url: url, trash_type: "아이스팩",handler: { jsonList in
+            for json in jsonList{
+                let item = json as? NSDictionary
+                let lat = item!["latitude"] as! Double
+                let lng = item!["longitude"] as! Double
+                
+                if lat == 0.0 {
+                    continue
+                }
+                if lat <= lat_right && lat >= lat_left && lng <= lng_top && lng >= lng_bot {
+                    let target = NMGLatLng(lat: lat, lng: lng)
+                    let addr = "\(String(describing: item!["addr"]!)) \(String(describing: item!["detail_addr"]!))"
+                    addrs.append(addr)
+                    targets.append(target)
+                }
+                
+            }
+            
+            self.markOnMap(coords: targets, addrs: addrs, mapView: mapView)
+        })
+        
+        view.addSubview(mapView)
+        view.bringSubviewToFront(mapView)
+    }
+    
+    func markOnMap(coords: [NMGLatLng], addrs: [String], mapView: NMFNaverMapView) -> Void {
+        var i = 0
+        
         for target in coords {
             let mk = NMFMarker()
             mk.position = target
@@ -42,7 +74,7 @@ class FourthChildViewController: UIViewController {
             mk.height = 40
             mk.mapView = mapView.mapView
             
-            mk.userInfo = ["tag" : addrs[n]]
+            mk.userInfo = ["tag" : addrs[i]]
             
             mk.touchHandler = { (overlay) -> Bool in
                 if let MARKER = overlay as? NMFMarker {
@@ -59,53 +91,26 @@ class FourthChildViewController: UIViewController {
                 }
                 return true
             }
-            n += 1
-        } // End of for loop
-        
-        view.addSubview(mapView)
-        view.bringSubviewToFront(mapView)
+            i += 1
+        }
     }
     
-    func getNearIP(current: NMGLatLng) -> ([NMGLatLng], [String : [String]]) {
-        let IPrequest: NSFetchRequest<IcePack> = IcePack.fetchRequest()
-        let IPfetchResult = PersistenceManager.shared.fetch(request: IPrequest)
-        
-        let lat_left = current.lat - 0.005
-        let lat_right = current.lat + 0.005
-        let lng_top = current.lng + 0.006
-        let lng_bot = current.lng - 0.006
-        
-        var targets_addr: [String : [String]] = [ : ]
-        var addrs: [String] = []
-        var targets: [NMGLatLng] = []
-        
-        for item in IPfetchResult {
-            if item.latitude == 0.0 {
-                continue
-            }
-            if item.latitude <= lat_right && item.latitude >= lat_left {
-                if item.longitude <= lng_top && item.longitude >= lng_bot {
-                    let target = NMGLatLng(lat: item.latitude, lng: item.longitude)
-                    let addr = "\(String(describing: item.address!)) \(String(describing: item.detailAddress!))"
-                    addrs.append(addr)
-                    targets.append(target)
+    func getCoords(url: String, trash_type: String, handler: @escaping (NSArray) -> Void){
+        AF.request(url,
+                   method: .get,
+                   parameters: ["trash_type": trash_type],
+                   encoding: URLEncoding.default,
+                   headers: ["Content-Type":"application/json", "Accept":"application/json"])
+            .responseJSON { response in
+                switch response.result{
+                case .success(let ret):
+                    let jsonList = ret as? NSArray
+                    handler(jsonList!)
+                    
+                case .failure(_):
+                    print("error")
                 }
             }
-        }
         
-        targets_addr["주소"] = addrs
-        
-        return (targets, targets_addr)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

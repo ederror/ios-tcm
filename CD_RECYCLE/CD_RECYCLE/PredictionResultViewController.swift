@@ -30,10 +30,10 @@ class PredictionResultViewController: UIViewController, UIImagePickerControllerD
         let url = "http://192.168.0.2:3654/upload"
         postImage(url: url, inputimg: inputimg!, handler: { nsdic in
             
-            self.resultName = nsdic["tname"] as? String
+            self.resultName = nsdic["name"] as? String
             self.nameLabel.text = "이 물건은 \(self.resultName ?? "...")입니다."
-            self.recyclewayLabel.text = nsdic["thowto"] as? String
-            self.resultIdx = nsdic["thowtoid"] as? Int16
+            self.recyclewayLabel.text = nsdic["howto"] as? String
+            self.resultIdx = nsdic["howtoid"] as? Int16
         })
         
     }

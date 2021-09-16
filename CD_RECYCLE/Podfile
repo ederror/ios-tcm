@@ -18,5 +18,4 @@ pod 'Alamofire', '~>5.0'
   target 'CD_RECYCLEUITests' do
     # Pods for testing
   end
-
 end
